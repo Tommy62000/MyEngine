@@ -5,11 +5,14 @@
 #include "core/Window.h"
 #include "core/Engine.h"
 #include "core/AssetManager.h"
+#include "core/log/Logger.h"
 #include "renderer/Renderer.h"
 
 int main() {
+    Logger::Init();
 
     Engine::init("/Users/tommasoleoni/Documents/Programmazione/Progetti lavoro/MyEngine");
+    Logger::Info("Engine started");
 
     Window window(800, 600, "MyEngine");
 
