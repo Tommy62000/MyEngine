@@ -5,8 +5,8 @@
 #include <filesystem>
 
 #include "core/Window.h"
+#include "core/Scene.h"
 #include "core/engine/Engine.h"
-#include "core/engine/AssetManager.h"
 #include "core/log/Logger.h"
 #include "renderer/Renderer.h"
 
@@ -25,23 +25,24 @@ int main() {
     Renderer renderer;
     renderer.init();
 
-    // Create the Mesh
+    // Create the Scene
+    Scene scene;
+
     std::vector<float> vertices = {
         -0.5f, -0.5f, 0.0f,
-         0.5f, -0.5f, 0.0f,
-         0.0f,  0.5f, 0.0f
+        0.5f, -0.5f, 0.0f,
+        0.0f,  0.5f, 0.0f
     };
 
     std::vector<unsigned int> indices = {
         0, 1, 2
     };
 
-    Mesh mesh = Mesh(vertices, indices);
+    scene.addMesh(std::make_unique<Mesh>(vertices, indices));
 
     while (!window.shouldClose()) {
-        renderer.submit(mesh);
         renderer.clear();
-        renderer.draw();
+        renderer.draw(scene);
 
         window.swapBuffers();
         window.pollEvents();

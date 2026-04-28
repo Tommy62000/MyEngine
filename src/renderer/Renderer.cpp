@@ -1,4 +1,5 @@
 #include "Renderer.h"
+#include "../core/Scene.h"
 #include "../core/engine/AssetManager.h"
 #include <glad/glad.h>
 
@@ -17,14 +18,10 @@ void Renderer::clear() {
     glClear(GL_COLOR_BUFFER_BIT);
 }
 
-void Renderer::draw() {
+void Renderer::draw(const Scene& scene) {
     shader->use();
-    for (Mesh* mesh : renderQueue) {
+
+    for (const auto& mesh : scene.getMeshes()) {
         mesh->draw();
     }
-    renderQueue.clear();
-}
-
-void Renderer::submit(Mesh& mesh) {
-    renderQueue.push_back(&mesh);
 }
