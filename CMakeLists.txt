@@ -11,12 +11,17 @@ add_library(glad external/glad/src/glad.c)
 target_include_directories(glad PUBLIC external/glad/include)
 
 # Executable
-add_executable(MyEngine src/main.cpp)
+file(GLOB_RECURSE SOURCES
+    src/*.cpp
+)
+
+add_executable(MyEngine ${SOURCES})
 
 # Include dirs
 target_include_directories(MyEngine PRIVATE
     external/glad/include
     external/glfw/include
+    ${CMAKE_SOURCE_DIR}/src
 )
 
 # Link

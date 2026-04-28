@@ -1,34 +1,28 @@
+#define GLFW_INCLUDE_NONE
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
+
+#include "core/Window.h"
+#include "core/Engine.h"
+#include "core/AssetManager.h"
+#include "renderer/Renderer.h"
 
 int main() {
-    if (!glfwInit()) {
-        std::cout << "Errore init GLFW\n";
-        return -1;
+
+    Engine::init("/Users/tommasoleoni/Documents/Programmazione/Progetti lavoro/MyEngine");
+
+    Window window(800, 600, "MyEngine");
+
+    gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+
+    Renderer renderer;
+    renderer.init();
+
+    while (!window.shouldClose()) {
+        renderer.clear();
+        renderer.drawTriangle();
+
+        window.swapBuffers();
+        window.pollEvents();
     }
-
-    GLFWwindow* window = glfwCreateWindow(800, 600, "MyEngine", NULL, NULL);
-    if (!window) {
-        std::cout << "Errore finestra\n";
-        glfwTerminate();
-        return -1;
-    }
-
-    glfwMakeContextCurrent(window);
-
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::cout << "Errore GLAD\n";
-        return -1;
-    }
-
-    while (!glfwWindowShouldClose(window)) {
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        glfwSwapBuffers(window);
-        glfwPollEvents();
-    }
-
-    glfwTerminate();
-    return 0;
 }
