@@ -26,3 +26,6 @@ Makefile
 
 # GLAD build artifacts (se presenti)
 external/glad/build/
+
+# Journey
+journey/*
