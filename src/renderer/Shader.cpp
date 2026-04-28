@@ -1,4 +1,5 @@
 #include "Shader.h"
+#include "../core/log/Logger.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -21,7 +22,7 @@ Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath) {
     if (!success) {
         char log[512];
         glGetProgramInfoLog(ID, 512, nullptr, log);
-        std::cout << "Shader link error:\n" << log << std::endl;
+        Logger::Error(std::string("Shader link error:\n") + log);
     }
 
     glDeleteShader(vertex);
@@ -37,7 +38,7 @@ std::string Shader::loadFile(const std::string& path) {
     std::stringstream stream;
 
     if (!file.is_open()) {
-        std::cout << "Failed to open shader: " << path << std::endl;
+        Logger::Error(std::string("Failed to open shader: ") + path);
         return "";
     }
 
@@ -58,7 +59,7 @@ unsigned int Shader::compile(unsigned int type, const std::string& source) {
     if (!success) {
         char log[512];
         glGetShaderInfoLog(shader, 512, nullptr, log);
-        std::cout << "Shader compile error:\n" << log << std::endl;
+        Logger::Error(std::string("Shader compile error:\n") + log);
     }
 
     return shader;

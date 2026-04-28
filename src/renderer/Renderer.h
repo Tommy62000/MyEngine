@@ -2,6 +2,8 @@
 #include "core/Window.h"
 #include "Shader.h"
 
+#include <memory>
+
 class Renderer {
 public:
     Renderer();
@@ -11,5 +13,5 @@ public:
 
 private:
     unsigned int VAO, VBO;
-    Shader* shader;
+    std::unique_ptr<Shader> shader;
 };
