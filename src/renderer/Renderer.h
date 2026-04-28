@@ -3,6 +3,7 @@
 #include "../core/Mesh.h"
 
 #include <memory>
+#include <vector>
 
 class Renderer {
 public:
@@ -11,8 +12,10 @@ public:
     void clear();
     void draw();
 
+    void submit(Mesh& mesh);
+
 private:
     unsigned int VAO, VBO;
     std::unique_ptr<Shader> shader;
-    std::unique_ptr<Mesh> triangleMesh;
+    std::vector<Mesh*> renderQueue;
 };

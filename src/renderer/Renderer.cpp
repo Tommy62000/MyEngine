@@ -1,5 +1,5 @@
 #include "Renderer.h"
-#include "../core/AssetManager.h"
+#include "../core/engine/AssetManager.h"
 #include <glad/glad.h>
 
 Renderer::Renderer() {}
@@ -10,19 +10,6 @@ void Renderer::init() {
         AssetManager::shader("basic.vert"),
         AssetManager::shader("basic.frag")
     );
-
-    // Create the Mesh
-    std::vector<float> vertices = {
-        -0.5f, -0.5f, 0.0f,
-         0.5f, -0.5f, 0.0f,
-         0.0f,  0.5f, 0.0f
-    };
-
-    std::vector<unsigned int> indices = {
-        0, 1, 2
-    };
-
-    triangleMesh = std::make_unique<Mesh>(vertices, indices);
 }
 
 void Renderer::clear() {
@@ -32,6 +19,12 @@ void Renderer::clear() {
 
 void Renderer::draw() {
     shader->use();
-    glBindVertexArray(VAO);
-    triangleMesh->draw();
+    for (Mesh* mesh : renderQueue) {
+        mesh->draw();
+    }
+    renderQueue.clear();
+}
+
+void Renderer::submit(Mesh& mesh) {
+    renderQueue.push_back(&mesh);
 }
