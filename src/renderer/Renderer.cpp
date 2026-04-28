@@ -2,34 +2,27 @@
 #include "../core/AssetManager.h"
 #include <glad/glad.h>
 
-float vertices[] = {
-    -0.5f, -0.5f, 0.0f,
-     0.5f, -0.5f, 0.0f,
-     0.0f,  0.5f, 0.0f
-};
-
 Renderer::Renderer() {}
 
 void Renderer::init() {
+    // Load shaders
     shader = std::make_unique<Shader>(
         AssetManager::shader("basic.vert"),
         AssetManager::shader("basic.frag")
     );
 
-    // Generate a Vertex Array Object (stores vertex attribute configuration)
-    glGenVertexArrays(1, &VAO);
-    // Generate a Vertex Buffer Object (stores vertex data in GPU memory)
-    glGenBuffers(1, &VBO);
-    // Bind the VAO (all subsequent vertex attribute calls will be stored here)
-    glBindVertexArray(VAO);
-    // Bind the VBO to GL_ARRAY_BUFFER (this becomes the active vertex buffer)
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    // Upload data to the GPU
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    // Define the layout of the vertex data (attribute 0)
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    // Enable the vertex attribute (location = 0)
-    glEnableVertexAttribArray(0);
+    // Create the Mesh
+    std::vector<float> vertices = {
+        -0.5f, -0.5f, 0.0f,
+         0.5f, -0.5f, 0.0f,
+         0.0f,  0.5f, 0.0f
+    };
+
+    std::vector<unsigned int> indices = {
+        0, 1, 2
+    };
+
+    triangleMesh = std::make_unique<Mesh>(vertices, indices);
 }
 
 void Renderer::clear() {
@@ -37,8 +30,8 @@ void Renderer::clear() {
     glClear(GL_COLOR_BUFFER_BIT);
 }
 
-void Renderer::drawTriangle() {
+void Renderer::draw() {
     shader->use();
     glBindVertexArray(VAO);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    triangleMesh->draw();
 }

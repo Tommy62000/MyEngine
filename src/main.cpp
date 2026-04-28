@@ -27,7 +27,7 @@ int main() {
 
     while (!window.shouldClose()) {
         renderer.clear();
-        renderer.drawTriangle();
+        renderer.draw();
 
         window.swapBuffers();
         window.pollEvents();
