@@ -24,7 +24,7 @@ glm::mat4 Camera::getViewMatrix() const
 
 void Camera::updateCameraVectors()
 {
-    // Build forward
+    // Build forward vector
     glm::vec3 f;
 
     f.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
