@@ -48,7 +48,25 @@ Mesh::~Mesh() {
     glDeleteVertexArrays(1, &VAO);
 }
 
-void Mesh::draw() {
+void Mesh::draw() const {
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, 0);
+    glBindVertexArray(0);
+}
+
+glm::mat4 Mesh::getModelMatrix() const {
+    glm::mat4 model(1.0f);
+
+    // Translation
+    model = glm::translate(model, position);
+
+    // Rotation (XYZ)
+    model = glm::rotate(model, glm::radians(rotation.x), glm::vec3(1, 0, 0));
+    model = glm::rotate(model, glm::radians(rotation.y), glm::vec3(0, 1, 0));
+    model = glm::rotate(model, glm::radians(rotation.z), glm::vec3(0, 0, 1));
+
+    // Scale
+    model = glm::scale(model, scale);
+
+    return model;
 }

@@ -2,6 +2,7 @@
 
 #include "Shader.h"
 #include "../core/Mesh.h"
+#include "../core/Camera.h"
 
 #include <memory>
 
@@ -13,7 +14,7 @@ public:
     void init();
     void clear();
 
-    void draw(const Scene& scene);
+    void draw(const Scene& scene, const Camera& camera);
 
 private:
     std::unique_ptr<Shader> shader;

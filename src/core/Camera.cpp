@@ -31,8 +31,8 @@ void Camera::updateCameraVectors()
     f.y = sin(glm::radians(pitch));
     f.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
 
-    // Obtaine the base
+    // Obtain the base
     u_f = glm::normalize(f);
     u_r = glm::normalize(glm::cross(u_f, worldUp));
-    u_u = glm::normalize(glm::cross(right, u_f));
+    u_u = glm::normalize(glm::cross(u_r, u_f));
 }

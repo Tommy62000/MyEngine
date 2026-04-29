@@ -18,10 +18,29 @@ void Renderer::clear() {
     glClear(GL_COLOR_BUFFER_BIT);
 }
 
-void Renderer::draw(const Scene& scene) {
+void Renderer::draw(const Scene& scene, const Camera& camera) {
+    // Use shaders
     shader->use();
 
+    // Obtain the camera matrix and the projection matrix
+    glm::mat4 view = camera.getViewMatrix();
+
+    glm::mat4 projection = glm::perspective(
+        glm::radians(60.0f),
+        16.0f / 9.0f, // meglio passarlo dinamicamente
+        0.1f,
+        100.0f
+    );
+
+    // Load the matrices in the shaders
+    shader->setMat4("view", view);
+    shader->setMat4("projection", projection);
+
     for (const auto& mesh : scene.getMeshes()) {
+        // Obtain model matrix
+        glm::mat4 model = mesh->getModelMatrix();
+        // Load the model matrix in the shaders
+        shader->setMat4("model", model);
         mesh->draw();
     }
 }

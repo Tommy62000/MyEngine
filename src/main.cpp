@@ -6,6 +6,7 @@
 
 #include "core/Window.h"
 #include "core/Scene.h"
+#include "core/Camera.h"
 #include "core/engine/Engine.h"
 #include "core/log/Logger.h"
 #include "renderer/Renderer.h"
@@ -38,11 +39,14 @@ int main() {
         0, 1, 2
     };
 
+    // Create the camera
+    Camera camera;
+
     scene.addMesh(std::make_unique<Mesh>(vertices, indices));
 
     while (!window.shouldClose()) {
         renderer.clear();
-        renderer.draw(scene);
+        renderer.draw(scene, camera);
 
         window.swapBuffers();
         window.pollEvents();
