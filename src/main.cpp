@@ -25,6 +25,7 @@ int main() {
 
     Renderer renderer;
     renderer.init();
+    Logger::Info("Renderer started");
 
     // Create the Scene
     Scene scene;

@@ -22,6 +22,16 @@ glm::mat4 Camera::getViewMatrix() const
     return glm::lookAt(C, C + u_f, u_u);
 }
 
+glm::mat4 Camera::getProjectionMatrix() const
+{
+    return glm::perspective(
+        glm::radians(fov),
+        aspectRatio,
+        nearPlane,
+        farPlane
+    );
+}
+
 void Camera::updateCameraVectors()
 {
     // Build forward vector
