@@ -1,0 +1,38 @@
+#include "Camera.h"
+#include <glm/gtc/constants.hpp>
+
+Camera::Camera(glm::vec3 C,
+               glm::vec3 worldUp,
+               float yaw,
+               float pitch)
+{
+    this->C = C;
+    this->worldUp = worldUp;
+
+    this->yaw = yaw;
+    this->pitch = pitch;
+
+    u_f = glm::vec3(0.0f, 0.0f, -1.0f);
+
+    updateCameraVectors();
+}
+
+glm::mat4 Camera::getViewMatrix() const
+{
+    return glm::lookAt(C, C + u_f, u_u);
+}
+
+void Camera::updateCameraVectors()
+{
+    // Build forward
+    glm::vec3 f;
+
+    f.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+    f.y = sin(glm::radians(pitch));
+    f.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+
+    // Obtaine the base
+    u_f = glm::normalize(f);
+    u_r = glm::normalize(glm::cross(u_f, worldUp));
+    u_u = glm::normalize(glm::cross(right, u_f));
+}

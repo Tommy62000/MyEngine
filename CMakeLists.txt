@@ -22,6 +22,7 @@ target_include_directories(MyEngine PRIVATE
     external/glad/include
     external/glfw/include
     ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/external
 )
 
 # Link
