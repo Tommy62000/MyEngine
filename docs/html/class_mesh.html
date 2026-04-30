@@ -91,25 +91,143 @@ $(function(){initNavTree('class_mesh.html','','class_mesh-members'); });
   <div class="headertitle"><div class="title">Mesh Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a renderable 3D mesh stored on the GPU.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_mesh_8h_source.html">Mesh.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9e2465c2be3134cbd4a6f3391928e2df" id="r_a9e2465c2be3134cbd4a6f3391928e2df"><td class="memItemLeft"><a id="a9e2465c2be3134cbd4a6f3391928e2df" name="a9e2465c2be3134cbd4a6f3391928e2df"></a>
-&#160;</td><td class="memItemRight"><b>Mesh</b> (const std::vector&lt; float &gt; &amp;vertices, const std::vector&lt; unsigned int &gt; &amp;indices)</td></tr>
-<tr class="memitem:a79b998580025a501675a517e9fc1283f" id="r_a79b998580025a501675a517e9fc1283f"><td class="memItemLeft"><a id="a79b998580025a501675a517e9fc1283f" name="a79b998580025a501675a517e9fc1283f"></a>
-void&#160;</td><td class="memItemRight"><b>draw</b> () const</td></tr>
-<tr class="memitem:a1d84a9ecab3f5496eb695414c9292e17" id="r_a1d84a9ecab3f5496eb695414c9292e17"><td class="memItemLeft"><a id="a1d84a9ecab3f5496eb695414c9292e17" name="a1d84a9ecab3f5496eb695414c9292e17"></a>
-glm::mat4&#160;</td><td class="memItemRight"><b>getModelMatrix</b> () const</td></tr>
+<tr class="memitem:a9e2465c2be3134cbd4a6f3391928e2df" id="r_a9e2465c2be3134cbd4a6f3391928e2df"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9e2465c2be3134cbd4a6f3391928e2df">Mesh</a> (const std::vector&lt; float &gt; &amp;vertices, const std::vector&lt; unsigned int &gt; &amp;indices)</td></tr>
+<tr class="memdesc:a9e2465c2be3134cbd4a6f3391928e2df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a mesh from raw vertex and index data.  <br /></td></tr>
+<tr class="memitem:a5efe4da1a4c0971cfb037bd70304c303" id="r_a5efe4da1a4c0971cfb037bd70304c303"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5efe4da1a4c0971cfb037bd70304c303">~Mesh</a> ()</td></tr>
+<tr class="memdesc:a5efe4da1a4c0971cfb037bd70304c303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases GPU resources associated with the mesh.  <br /></td></tr>
+<tr class="memitem:a79b998580025a501675a517e9fc1283f" id="r_a79b998580025a501675a517e9fc1283f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a79b998580025a501675a517e9fc1283f">draw</a> () const</td></tr>
+<tr class="memdesc:a79b998580025a501675a517e9fc1283f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the mesh.  <br /></td></tr>
+<tr class="memitem:a1d84a9ecab3f5496eb695414c9292e17" id="r_a1d84a9ecab3f5496eb695414c9292e17"><td class="memItemLeft">glm::mat4&#160;</td><td class="memItemRight"><a class="el" href="#a1d84a9ecab3f5496eb695414c9292e17">getModelMatrix</a> () const</td></tr>
+<tr class="memdesc:a1d84a9ecab3f5496eb695414c9292e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the model transformation matrix.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af3c130a7e2a9d259b3bb1e258c08f90e" id="r_af3c130a7e2a9d259b3bb1e258c08f90e"><td class="memItemLeft"><a id="af3c130a7e2a9d259b3bb1e258c08f90e" name="af3c130a7e2a9d259b3bb1e258c08f90e"></a>
 glm::vec3&#160;</td><td class="memItemRight"><b>position</b> {0.0f}</td></tr>
+<tr class="memdesc:af3c130a7e2a9d259b3bb1e258c08f90e"><td class="mdescLeft">&#160;</td><td class="mdescRight">WCS position of the mesh. <br /></td></tr>
 <tr class="memitem:a73a92a342c5fc081422d12e26ebcda85" id="r_a73a92a342c5fc081422d12e26ebcda85"><td class="memItemLeft"><a id="a73a92a342c5fc081422d12e26ebcda85" name="a73a92a342c5fc081422d12e26ebcda85"></a>
 glm::vec3&#160;</td><td class="memItemRight"><b>rotation</b> {0.0f}</td></tr>
+<tr class="memdesc:a73a92a342c5fc081422d12e26ebcda85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation [degrees]. <br /></td></tr>
 <tr class="memitem:aea97af1884bc8be8a4b14922317dafce" id="r_aea97af1884bc8be8a4b14922317dafce"><td class="memItemLeft"><a id="aea97af1884bc8be8a4b14922317dafce" name="aea97af1884bc8be8a4b14922317dafce"></a>
 glm::vec3&#160;</td><td class="memItemRight"><b>scale</b> {1.0f}</td></tr>
+<tr class="memdesc:aea97af1884bc8be8a4b14922317dafce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale factor. <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a renderable 3D mesh stored on the GPU. </p>
+<p>A mesh encapsulates:</p><ul>
+<li>Vertex data (VBO)</li>
+<li>Index data (EBO)</li>
+<li>Vertex array configuration (VAO)</li>
+</ul>
+<p>It is responsible for storing geometry in GPU memory and issuing draw calls. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9e2465c2be3134cbd4a6f3391928e2df" name="a9e2465c2be3134cbd4a6f3391928e2df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2465c2be3134cbd4a6f3391928e2df">&#9670;&#160;</a></span>Mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mesh::Mesh </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vertices</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; unsigned int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>indices</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a mesh from raw vertex and index data. </p>
+<p>Uploads vertex data to the GPU and configures the VAO/VBO/EBO layout required for rendering.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>Interleaved vertex data (position, normals, etc.) </td></tr>
+    <tr><td class="paramname">indices</td><td>Index buffer defining triangle connectivity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5efe4da1a4c0971cfb037bd70304c303" name="a5efe4da1a4c0971cfb037bd70304c303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5efe4da1a4c0971cfb037bd70304c303">&#9670;&#160;</a></span>~Mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mesh::~Mesh </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Releases GPU resources associated with the mesh. </p>
+<p>Deletes VAO, VBO, and EBO from GPU memory. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a79b998580025a501675a517e9fc1283f" name="a79b998580025a501675a517e9fc1283f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b998580025a501675a517e9fc1283f">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mesh::draw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renders the mesh. </p>
+<p>Binds the VAO and issues a draw call using indexed rendering.</p>
+<p>Assumes that a valid shader program is already active. </p>
+
+</div>
+</div>
+<a id="a1d84a9ecab3f5496eb695414c9292e17" name="a1d84a9ecab3f5496eb695414c9292e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d84a9ecab3f5496eb695414c9292e17">&#9670;&#160;</a></span>getModelMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::mat4 Mesh::getModelMatrix </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the model transformation matrix. </p>
+<p>Combines translation, rotation, and scaling into a single matrix that transforms object space into world space.</p>
+<p>Order of transformations:</p><ol type="1">
+<li>Scale</li>
+<li>Rotate (Z → Y → X or implementation-defined)</li>
+<li>Translate</li>
+</ol>
+<dl class="section return"><dt>Returns</dt><dd>glm::mat4 Model matrix </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/<a class="el" href="_mesh_8h_source.html">Mesh.h</a></li>
 <li>src/core/<b>Mesh.cpp</b></li>

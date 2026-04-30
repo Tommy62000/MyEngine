@@ -24,19 +24,33 @@
 \contentsline {section}{\numberline {3.3}Engine Class Reference}{11}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Logger Class Reference}{11}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Mesh Class Reference}{12}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Renderer Class Reference}{12}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Scene Class Reference}{12}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Shader Class Reference}{13}{section.3.8}%
-\contentsline {section}{\numberline {3.9}Window Class Reference}{13}{section.3.9}%
-\contentsline {chapter}{\numberline {4}File Documentation}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Camera.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{15}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Asset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Engine.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Log.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Logger.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Mesh.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Window.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Renderer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Shader.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.4.10}%
-\contentsline {chapter}{Index}{19}{section*.13}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{12}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Constructor \& Destructor Documentation}{12}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}Mesh()}{12}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}$\sim $Mesh()}{13}{subsubsection.3.5.2.2}%
+\contentsline {subsection}{\numberline {3.5.3}Member Function Documentation}{13}{subsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.3.1}draw()}{13}{subsubsection.3.5.3.1}%
+\contentsline {subsubsection}{\numberline {3.5.3.2}getModelMatrix()}{13}{subsubsection.3.5.3.2}%
+\contentsline {section}{\numberline {3.6}Renderer Class Reference}{14}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{14}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Constructor \& Destructor Documentation}{14}{subsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}Renderer()}{14}{subsubsection.3.6.2.1}%
+\contentsline {subsection}{\numberline {3.6.3}Member Function Documentation}{14}{subsection.3.6.3}%
+\contentsline {subsubsection}{\numberline {3.6.3.1}clear()}{14}{subsubsection.3.6.3.1}%
+\contentsline {subsubsection}{\numberline {3.6.3.2}draw()}{15}{subsubsection.3.6.3.2}%
+\contentsline {subsubsection}{\numberline {3.6.3.3}init()}{15}{subsubsection.3.6.3.3}%
+\contentsline {section}{\numberline {3.7}Scene Class Reference}{15}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Shader Class Reference}{16}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Window Class Reference}{16}{section.3.9}%
+\contentsline {chapter}{\numberline {4}File Documentation}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Camera.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Asset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Engine.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Log.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Logger.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Mesh.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Window.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Renderer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Shader.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{20}{section.4.10}%
+\contentsline {chapter}{Index}{21}{section*.13}%

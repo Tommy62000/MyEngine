@@ -1,18 +1,102 @@
 \doxysection{Renderer Class Reference}
 \hypertarget{class_renderer}{}\label{class_renderer}\index{Renderer@{Renderer}}
+
+
+Responsible for rendering a scene using a camera and shader pipeline.  
+
+
+
+
+{\ttfamily \+\#include $<$Renderer.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_renderer_a26abbb3bdc9dae7fe089a8ea7d1b9a30}\label{class_renderer_a26abbb3bdc9dae7fe089a8ea7d1b9a30} 
-void {\bfseries init} ()
-\item 
-\Hypertarget{class_renderer_ac46720b3fc0dbb2fc37674766490a8c4}\label{class_renderer_ac46720b3fc0dbb2fc37674766490a8c4} 
-void {\bfseries clear} ()
-\item 
-\Hypertarget{class_renderer_a67300beb7c92c9ec65ed516c87b88d7f}\label{class_renderer_a67300beb7c92c9ec65ed516c87b88d7f} 
-void {\bfseries draw} (const \doxymbox{\hyperlink{class_scene}{Scene}} \&scene, const \doxymbox{\hyperlink{class_camera}{Camera}} \&camera)
-\end{DoxyCompactItemize}
+\doxymbox{\hyperlink{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}{Renderer}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the renderer. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_renderer_a26abbb3bdc9dae7fe089a8ea7d1b9a30}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes rendering state. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_renderer_ac46720b3fc0dbb2fc37674766490a8c4}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the rendering buffers. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_renderer_a67300beb7c92c9ec65ed516c87b88d7f}{draw}} (const \doxymbox{\hyperlink{class_scene}{Scene}} \&scene, const \doxymbox{\hyperlink{class_camera}{Camera}} \&camera)
+\begin{DoxyCompactList}\small\item\em Renders a complete scene from the perspective of a camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Responsible for rendering a scene using a camera and shader pipeline. 
+
+The \doxylink{class_renderer}{Renderer} is the core of the rendering system. It takes a \doxylink{class_scene}{Scene} and a \doxylink{class_camera}{Camera} and produces a final image by:\+
+\begin{DoxyItemize}
+\item binding shaders
+\item setting uniforms (view/\+projection matrices)
+\item issuing draw calls for all meshes in the scene 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_renderer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily \label{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6} 
+Renderer::\+\+Renderer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the renderer. 
+
+Initializes internal rendering resources such as shaders. 
+
+\label{doc-func-members}
+\Hypertarget{class_renderer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_renderer_ac46720b3fc0dbb2fc37674766490a8c4}\index{Renderer@{Renderer}!clear@{clear}}
+\index{clear@{clear}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_renderer_ac46720b3fc0dbb2fc37674766490a8c4} 
+void Renderer::\+clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears the rendering buffers. 
+
+Clears color and depth buffers at the beginning of a frame. \Hypertarget{class_renderer_a67300beb7c92c9ec65ed516c87b88d7f}\index{Renderer@{Renderer}!draw@{draw}}
+\index{draw@{draw}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_renderer_a67300beb7c92c9ec65ed516c87b88d7f} 
+void Renderer::\+draw (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{, }\item[{const \doxymbox{\hyperlink{class_camera}{Camera}} \&}]{camera}{}\end{DoxyParamCaption})}
+
+
+
+Renders a complete scene from the perspective of a camera. 
+
+This function performs the full rendering pipeline:\+
+\begin{DoxyEnumerate}
+\item Activates the shader program
+\item Uploads camera view and projection matrices
+\item Iterates over all scene objects
+\item Applies model transformations
+\item Issues draw calls for each mesh
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \doxylink{class_scene}{Scene} containing all renderable objects \\
+\hline
+{\em camera} & \doxylink{class_camera}{Camera} defining view and projection matrices \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_renderer_a26abbb3bdc9dae7fe089a8ea7d1b9a30}\index{Renderer@{Renderer}!init@{init}}
+\index{init@{init}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_renderer_a26abbb3bdc9dae7fe089a8ea7d1b9a30} 
+void Renderer::\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes rendering state. 
+
+Sets up GPU state, loads shaders and prepares the renderer for drawing. Must be called before any draw operation. 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
 \item 

@@ -1,29 +1,122 @@
 \doxysection{Mesh Class Reference}
 \hypertarget{class_mesh}{}\label{class_mesh}\index{Mesh@{Mesh}}
+
+
+Represents a renderable 3D mesh stored on the GPU.  
+
+
+
+
+{\ttfamily \+\#include $<$Mesh.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_mesh_a9e2465c2be3134cbd4a6f3391928e2df}\label{class_mesh_a9e2465c2be3134cbd4a6f3391928e2df} 
-{\bfseries Mesh} (const std::\+vector$<$ float $>$ \&vertices, const std::\+vector$<$ unsigned int $>$ \&indices)
-\item 
-\Hypertarget{class_mesh_a79b998580025a501675a517e9fc1283f}\label{class_mesh_a79b998580025a501675a517e9fc1283f} 
-void {\bfseries draw} () const
-\item 
-\Hypertarget{class_mesh_a1d84a9ecab3f5496eb695414c9292e17}\label{class_mesh_a1d84a9ecab3f5496eb695414c9292e17} 
-glm::\+mat4 {\bfseries get\+Model\+Matrix} () const
-\end{DoxyCompactItemize}
+\doxymbox{\hyperlink{class_mesh_a9e2465c2be3134cbd4a6f3391928e2df}{Mesh}} (const std::\+vector$<$ float $>$ \&vertices, const std::\+vector$<$ unsigned int $>$ \&indices)
+\begin{DoxyCompactList}\small\item\em Creates a mesh from raw vertex and index data. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_mesh_a5efe4da1a4c0971cfb037bd70304c303}{\texorpdfstring{$\sim$}{\string~}\+Mesh}} ()
+\begin{DoxyCompactList}\small\item\em Releases GPU resources associated with the mesh. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_mesh_a79b998580025a501675a517e9fc1283f}{draw}} () const
+\begin{DoxyCompactList}\small\item\em Renders the mesh. \end{DoxyCompactList}\item 
+glm::\+mat4 \doxymbox{\hyperlink{class_mesh_a1d84a9ecab3f5496eb695414c9292e17}{get\+Model\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Computes the model transformation matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_mesh_af3c130a7e2a9d259b3bb1e258c08f90e}\label{class_mesh_af3c130a7e2a9d259b3bb1e258c08f90e} 
 glm::\+vec3 {\bfseries position} \{0.\+0f\}
-\item 
+\begin{DoxyCompactList}\small\item\em WCS position of the mesh. \end{DoxyCompactList}\item 
 \Hypertarget{class_mesh_a73a92a342c5fc081422d12e26ebcda85}\label{class_mesh_a73a92a342c5fc081422d12e26ebcda85} 
 glm::\+vec3 {\bfseries rotation} \{0.\+0f\}
-\item 
+\begin{DoxyCompactList}\small\item\em Rotation \+[degrees]\+. \end{DoxyCompactList}\item 
 \Hypertarget{class_mesh_aea97af1884bc8be8a4b14922317dafce}\label{class_mesh_aea97af1884bc8be8a4b14922317dafce} 
 glm::\+vec3 {\bfseries scale} \{1.\+0f\}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Scale factor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a renderable 3D mesh stored on the GPU. 
+
+A mesh encapsulates:\+
+\begin{DoxyItemize}
+\item Vertex data (VBO)
+\item Index data (EBO)
+\item Vertex array configuration (VAO)
+\end{DoxyItemize}
+
+It is responsible for storing geometry in GPU memory and issuing draw calls. 
+
+\label{doc-constructors}
+\Hypertarget{class_mesh_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mesh_a9e2465c2be3134cbd4a6f3391928e2df}\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily \label{class_mesh_a9e2465c2be3134cbd4a6f3391928e2df} 
+Mesh::\+\+Mesh (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ float $>$ \&}]{vertices}{, }\item[{const std::\+vector$<$ unsigned int $>$ \&}]{indices}{}\end{DoxyParamCaption})}
+
+
+
+Creates a mesh from raw vertex and index data. 
+
+Uploads vertex data to the GPU and configures the VAO/\+\+VBO/\+\+EBO layout required for rendering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & Interleaved vertex data (position, normals, etc.) \\
+\hline
+{\em indices} & Index buffer defining triangle connectivity \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mesh_a5efe4da1a4c0971cfb037bd70304c303}\index{Mesh@{Mesh}!````~Mesh@{\texorpdfstring{$\sim$}{\string~}Mesh}}
+\index{````~Mesh@{\texorpdfstring{$\sim$}{\string~}Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Mesh()}{\string~Mesh()}}
+{\footnotesize\ttfamily \label{class_mesh_a5efe4da1a4c0971cfb037bd70304c303} 
+Mesh::\+\texorpdfstring{$\sim$}{\string~}\+Mesh (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Releases GPU resources associated with the mesh. 
+
+Deletes VAO, VBO, and EBO from GPU memory. 
+
+\label{doc-func-members}
+\Hypertarget{class_mesh_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mesh_a79b998580025a501675a517e9fc1283f}\index{Mesh@{Mesh}!draw@{draw}}
+\index{draw@{draw}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_mesh_a79b998580025a501675a517e9fc1283f} 
+void Mesh::\+draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Renders the mesh. 
+
+Binds the VAO and issues a draw call using indexed rendering.
+
+Assumes that a valid shader program is already active. \Hypertarget{class_mesh_a1d84a9ecab3f5496eb695414c9292e17}\index{Mesh@{Mesh}!getModelMatrix@{getModelMatrix}}
+\index{getModelMatrix@{getModelMatrix}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{getModelMatrix()}{getModelMatrix()}}
+{\footnotesize\ttfamily \label{class_mesh_a1d84a9ecab3f5496eb695414c9292e17} 
+glm::\+mat4 Mesh::\+get\+Model\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes the model transformation matrix. 
+
+Combines translation, rotation, and scaling into a single matrix that transforms object space into world space.
+
+Order of transformations:\+
+\begin{DoxyEnumerate}
+\item Scale
+\item Rotate (Z → Y → X or implementation-\/defined)
+\item Translate
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+glm::\+mat4 Model matrix 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}

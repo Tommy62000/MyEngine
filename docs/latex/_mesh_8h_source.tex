@@ -9,26 +9,27 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <glm/gtc/matrix\_transform.hpp>}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Mesh\ \{}
-\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00010\ \ \ \ \ Mesh(\textcolor{keyword}{const}\ std::vector<float>\&\ vertices,}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<unsigned\ int>\&\ indices);}
-\DoxyCodeLine{00012\ \ \ \ \ \string~Mesh();}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ draw()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Transform}}
-\DoxyCodeLine{00017\ \ \ \ \ glm::vec3\ position\ \{0.0f\};}
-\DoxyCodeLine{00018\ \ \ \ \ glm::vec3\ rotation\ \{0.0f\};\ \textcolor{comment}{//\ gradi}}
-\DoxyCodeLine{00019\ \ \ \ \ glm::vec3\ scale\ \ \ \ \{1.0f\};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ glm::mat4\ getModelMatrix()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ VAO;}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ VBO;}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ EBO;}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indexCount;}
-\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_mesh_a9e2465c2be3134cbd4a6f3391928e2df}{Mesh}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{class_mesh_a9e2465c2be3134cbd4a6f3391928e2df}{Mesh}}(\textcolor{keyword}{const}\ std::vector<float>\&\ vertices,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<unsigned\ int>\&\ indices);}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \doxymbox{\hyperlink{class_mesh_a5efe4da1a4c0971cfb037bd70304c303}{\string~Mesh}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_mesh_a79b998580025a501675a517e9fc1283f}{draw}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Transform}}
+\DoxyCodeLine{00050\ \ \ \ \ glm::vec3\ \doxymbox{\hyperlink{class_mesh_af3c130a7e2a9d259b3bb1e258c08f90e}{position}}\ \{0.0f\};\ }
+\DoxyCodeLine{00051\ \ \ \ \ glm::vec3\ \doxymbox{\hyperlink{class_mesh_a73a92a342c5fc081422d12e26ebcda85}{rotation}}\ \{0.0f\};\ }
+\DoxyCodeLine{00052\ \ \ \ \ glm::vec3\ \doxymbox{\hyperlink{class_mesh_aea97af1884bc8be8a4b14922317dafce}{scale}}\ \ \ \ \{1.0f\};\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00067\ \ \ \ \ glm::mat4\ \doxymbox{\hyperlink{class_mesh_a1d84a9ecab3f5496eb695414c9292e17}{getModelMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ VAO;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ VBO;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ EBO;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indexCount;}
+\DoxyCodeLine{00074\ \};}
 
 \end{DoxyCode}

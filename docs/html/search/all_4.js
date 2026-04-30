@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['getprojectionmatrix_0',['getProjectionMatrix',['../class_camera.html#a3bb21fdfb8bd8974c880a33741a549df',1,'Camera']]],
-  ['getviewmatrix_1',['getViewMatrix',['../class_camera.html#a2f90e661a78172675ca06ea69667b531',1,'Camera']]]
+  ['farplane_0',['farPlane',['../class_camera.html#a8e8436cced3a180e13bfafa0791fb82a',1,'Camera']]],
+  ['fov_1',['fov',['../class_camera.html#aff7393c9cfbccd7e369091f00008da93',1,'Camera']]]
 ];

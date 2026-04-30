@@ -49,7 +49,6 @@ int main() {
 
     // Create the camera
     Camera camera;
-    camera.setFov(90);
 
     // Obtain window aspect ratio
     int width, height;

@@ -91,16 +91,129 @@ $(function(){initNavTree('class_renderer.html','','class_renderer-members'); });
   <div class="headertitle"><div class="title">Renderer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Responsible for rendering a scene using a camera and shader pipeline.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a26abbb3bdc9dae7fe089a8ea7d1b9a30" id="r_a26abbb3bdc9dae7fe089a8ea7d1b9a30"><td class="memItemLeft"><a id="a26abbb3bdc9dae7fe089a8ea7d1b9a30" name="a26abbb3bdc9dae7fe089a8ea7d1b9a30"></a>
-void&#160;</td><td class="memItemRight"><b>init</b> ()</td></tr>
-<tr class="memitem:ac46720b3fc0dbb2fc37674766490a8c4" id="r_ac46720b3fc0dbb2fc37674766490a8c4"><td class="memItemLeft"><a id="ac46720b3fc0dbb2fc37674766490a8c4" name="ac46720b3fc0dbb2fc37674766490a8c4"></a>
-void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
-<tr class="memitem:a67300beb7c92c9ec65ed516c87b88d7f" id="r_a67300beb7c92c9ec65ed516c87b88d7f"><td class="memItemLeft"><a id="a67300beb7c92c9ec65ed516c87b88d7f" name="a67300beb7c92c9ec65ed516c87b88d7f"></a>
-void&#160;</td><td class="memItemRight"><b>draw</b> (const <a class="el" href="class_scene.html">Scene</a> &amp;scene, const <a class="el" href="class_camera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="memitem:a7ebf46f54dab9905f79b80f7fddb76a6" id="r_a7ebf46f54dab9905f79b80f7fddb76a6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7ebf46f54dab9905f79b80f7fddb76a6">Renderer</a> ()</td></tr>
+<tr class="memdesc:a7ebf46f54dab9905f79b80f7fddb76a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the renderer.  <br /></td></tr>
+<tr class="memitem:a26abbb3bdc9dae7fe089a8ea7d1b9a30" id="r_a26abbb3bdc9dae7fe089a8ea7d1b9a30"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a26abbb3bdc9dae7fe089a8ea7d1b9a30">init</a> ()</td></tr>
+<tr class="memdesc:a26abbb3bdc9dae7fe089a8ea7d1b9a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes rendering state.  <br /></td></tr>
+<tr class="memitem:ac46720b3fc0dbb2fc37674766490a8c4" id="r_ac46720b3fc0dbb2fc37674766490a8c4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac46720b3fc0dbb2fc37674766490a8c4">clear</a> ()</td></tr>
+<tr class="memdesc:ac46720b3fc0dbb2fc37674766490a8c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the rendering buffers.  <br /></td></tr>
+<tr class="memitem:a67300beb7c92c9ec65ed516c87b88d7f" id="r_a67300beb7c92c9ec65ed516c87b88d7f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a67300beb7c92c9ec65ed516c87b88d7f">draw</a> (const <a class="el" href="class_scene.html">Scene</a> &amp;scene, const <a class="el" href="class_camera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="memdesc:a67300beb7c92c9ec65ed516c87b88d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders a complete scene from the perspective of a camera.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Responsible for rendering a scene using a camera and shader pipeline. </p>
+<p>The <a class="el" href="class_renderer.html" title="Responsible for rendering a scene using a camera and shader pipeline.">Renderer</a> is the core of the rendering system. It takes a <a class="el" href="class_scene.html">Scene</a> and a <a class="el" href="class_camera.html" title="A 3D camera.">Camera</a> and produces a final image by:</p><ul>
+<li>binding shaders</li>
+<li>setting uniforms (view/projection matrices)</li>
+<li>issuing draw calls for all meshes in the scene </li>
+</ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7ebf46f54dab9905f79b80f7fddb76a6" name="a7ebf46f54dab9905f79b80f7fddb76a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebf46f54dab9905f79b80f7fddb76a6">&#9670;&#160;</a></span>Renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderer::Renderer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the renderer. </p>
+<p>Initializes internal rendering resources such as shaders. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac46720b3fc0dbb2fc37674766490a8c4" name="ac46720b3fc0dbb2fc37674766490a8c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46720b3fc0dbb2fc37674766490a8c4">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the rendering buffers. </p>
+<p>Clears color and depth buffers at the beginning of a frame. </p>
+
+</div>
+</div>
+<a id="a67300beb7c92c9ec65ed516c87b88d7f" name="a67300beb7c92c9ec65ed516c87b88d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67300beb7c92c9ec65ed516c87b88d7f">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::draw </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_scene.html">Scene</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_camera.html">Camera</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renders a complete scene from the perspective of a camera. </p>
+<p>This function performs the full rendering pipeline:</p><ol type="1">
+<li>Activates the shader program</li>
+<li>Uploads camera view and projection matrices</li>
+<li>Iterates over all scene objects</li>
+<li>Applies model transformations</li>
+<li>Issues draw calls for each mesh</li>
+</ol>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td><a class="el" href="class_scene.html">Scene</a> containing all renderable objects </td></tr>
+    <tr><td class="paramname">camera</td><td><a class="el" href="class_camera.html" title="A 3D camera.">Camera</a> defining view and projection matrices </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a26abbb3bdc9dae7fe089a8ea7d1b9a30" name="a26abbb3bdc9dae7fe089a8ea7d1b9a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26abbb3bdc9dae7fe089a8ea7d1b9a30">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes rendering state. </p>
+<p>Sets up GPU state, loads shaders and prepares the renderer for drawing. Must be called before any draw operation. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/renderer/<a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
 <li>src/renderer/<b>Renderer.cpp</b></li>

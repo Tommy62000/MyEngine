@@ -1,5 +1,10 @@
 \begin{theindex}
 
+  \item {\texorpdfstring{$\sim$}{\string~}Mesh}
+    \subitem {Mesh}, \hyperpage{13}
+
+  \indexspace
+
   \item {AssetManager}, \hyperpage{5}
 
   \indexspace
@@ -17,6 +22,14 @@
     \subitem {setWorldUp}, \hyperpage{10}
     \subitem {setYaw}, \hyperpage{10}
     \subitem {updateCameraVectors}, \hyperpage{10}
+  \item {clear}
+    \subitem {Renderer}, \hyperpage{14}
+
+  \indexspace
+
+  \item {draw}
+    \subitem {Mesh}, \hyperpage{13}
+    \subitem {Renderer}, \hyperpage{14}
 
   \indexspace
 
@@ -24,10 +37,17 @@
 
   \indexspace
 
+  \item {getModelMatrix}
+    \subitem {Mesh}, \hyperpage{13}
   \item {getProjectionMatrix}
     \subitem {Camera}, \hyperpage{8}
   \item {getViewMatrix}
     \subitem {Camera}, \hyperpage{8}
+
+  \indexspace
+
+  \item {init}
+    \subitem {Renderer}, \hyperpage{15}
 
   \indexspace
 
@@ -36,14 +56,22 @@
   \indexspace
 
   \item {Mesh}, \hyperpage{12}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Mesh}, \hyperpage{13}
+    \subitem {draw}, \hyperpage{13}
+    \subitem {getModelMatrix}, \hyperpage{13}
+    \subitem {Mesh}, \hyperpage{12}
 
   \indexspace
 
-  \item {Renderer}, \hyperpage{12}
+  \item {Renderer}, \hyperpage{14}
+    \subitem {clear}, \hyperpage{14}
+    \subitem {draw}, \hyperpage{14}
+    \subitem {init}, \hyperpage{15}
+    \subitem {Renderer}, \hyperpage{14}
 
   \indexspace
 
-  \item {Scene}, \hyperpage{12}
+  \item {Scene}, \hyperpage{15}
   \item {setAspectRatio}
     \subitem {Camera}, \hyperpage{8}
   \item {setFarPlane}
@@ -60,17 +88,17 @@
     \subitem {Camera}, \hyperpage{10}
   \item {setYaw}
     \subitem {Camera}, \hyperpage{10}
-  \item {Shader}, \hyperpage{13}
-  \item {src/core/Camera.h}, \hyperpage{15}
-  \item {src/core/engine/AssetManager.h}, \hyperpage{16}
-  \item {src/core/engine/Engine.h}, \hyperpage{16}
-  \item {src/core/log/Log.h}, \hyperpage{16}
-  \item {src/core/log/Logger.h}, \hyperpage{16}
-  \item {src/core/Mesh.h}, \hyperpage{16}
-  \item {src/core/Scene.h}, \hyperpage{17}
-  \item {src/core/Window.h}, \hyperpage{17}
-  \item {src/renderer/Renderer.h}, \hyperpage{17}
-  \item {src/renderer/Shader.h}, \hyperpage{18}
+  \item {Shader}, \hyperpage{16}
+  \item {src/core/Camera.h}, \hyperpage{17}
+  \item {src/core/engine/AssetManager.h}, \hyperpage{18}
+  \item {src/core/engine/Engine.h}, \hyperpage{18}
+  \item {src/core/log/Log.h}, \hyperpage{18}
+  \item {src/core/log/Logger.h}, \hyperpage{18}
+  \item {src/core/Mesh.h}, \hyperpage{18}
+  \item {src/core/Scene.h}, \hyperpage{19}
+  \item {src/core/Window.h}, \hyperpage{19}
+  \item {src/renderer/Renderer.h}, \hyperpage{19}
+  \item {src/renderer/Shader.h}, \hyperpage{20}
 
   \indexspace
 
@@ -79,6 +107,6 @@
 
   \indexspace
 
-  \item {Window}, \hyperpage{13}
+  \item {Window}, \hyperpage{16}
 
 \end{theindex}

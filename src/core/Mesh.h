@@ -31,13 +31,9 @@ public:
         const std::vector<unsigned int>& indices);
     
     /**
-     * @brief Creates a mesh from raw vertex and index data.
+     * @brief Releases GPU resources associated with the mesh.
      *
-     * Uploads vertex data to the GPU and configures the VAO/VBO/EBO layout
-     * required for rendering.
-     *
-     * @param vertices Interleaved vertex data (position, normals, etc.)
-     * @param indices Index buffer defining triangle connectivity
+     * Deletes VAO, VBO, and EBO from GPU memory.
      */
     ~Mesh();
 
