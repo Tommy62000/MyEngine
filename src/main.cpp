@@ -20,7 +20,6 @@ int main() {
     Logger::Info("Engine started");
 
     Window window(800, 600, "MyEngine");
-
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
     Renderer renderer;
@@ -42,6 +41,12 @@ int main() {
 
     // Create the camera
     Camera camera;
+    camera.setFov(90);
+
+    // Obtain window aspect ratio
+    int width, height;
+    glfwGetFramebufferSize(window.getNativeWindow(), &width, &height);
+    camera.setAspectRatio((float) width / (float) height);
 
     scene.addMesh(std::make_unique<Mesh>(vertices, indices));
 

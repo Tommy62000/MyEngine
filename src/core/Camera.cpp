@@ -17,6 +17,18 @@ Camera::Camera(glm::vec3 C,
     updateCameraVectors();
 }
 
+void Camera::setFov(float newFov) {
+    fov = newFov;
+
+    // Clamp
+    if (fov < 1.0f) fov = 1.0f;
+    if (fov > 120.0f) fov = 120.0f;
+}
+
+void Camera::setAspectRatio(float newAspectRatio) {
+    aspectRatio = newAspectRatio;
+}
+
 glm::mat4 Camera::getViewMatrix() const
 {
     return glm::lookAt(C, C + u_f, u_u);
