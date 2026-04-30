@@ -1,0 +1,302 @@
+\doxysection{Camera Class Reference}
+\hypertarget{class_camera}{}\label{class_camera}\index{Camera@{Camera}}
+
+
+A 3D camera.  
+
+
+
+
+{\ttfamily \+\#include $<$Camera.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_camera_a43beb93105ae5a91c1948ae577a654e0}{set\+Position}} (const glm::\+vec3 \&new\+Position)
+\begin{DoxyCompactList}\small\item\em Sets the camera position in WCS. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_camera_a1df2aa14e936b9a77d300901d9bf10aa}{set\+World\+Up}} (const glm::\+vec3 \&new\+World\+Up)
+\begin{DoxyCompactList}\small\item\em Sets the world up vector. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_camera_a97dcca00ac357426bc7ef9e99040aaee}{set\+Yaw}} (float new\+Yaw)
+\begin{DoxyCompactList}\small\item\em Sets the camera yaw angle. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_camera_a5cb6768d252de0ec2922d4638868844d}{set\+Pitch}} (float new\+Pitch)
+\begin{DoxyCompactList}\small\item\em Sets the camera pitch angle. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_camera_aa626c27241aa2749821bb4ac3dca483a}{set\+Fov}} (float new\+Fov)
+\begin{DoxyCompactList}\small\item\em Sets the vertical field of view. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_camera_a2fd7432c0256ad790097b87c018c4b3f}{set\+Aspect\+Ratio}} (float new\+Aspect\+Ratio)
+\begin{DoxyCompactList}\small\item\em Sets the aspect ratio of the viewport. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_camera_a733fb6fc530d03f207fd34c4006a310e}{set\+Near\+Plane}} (float new\+Near\+Plane)
+\begin{DoxyCompactList}\small\item\em Sets near clipping plane distance. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_camera_a3c35a632a9f8d81889ef0513ac8eba35}{set\+Far\+Plane}} (float new\+Far\+Plane)
+\begin{DoxyCompactList}\small\item\em Sets far clipping plane distance. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_camera_a5dac6554771b6f4eb48f1f40773e5e38}{Camera}} (glm::\+vec3 \doxymbox{\hyperlink{class_camera_a2a4da80c688f35015fa2667cdb7890a5}{C}}=glm::\+vec3(0.\+0f, 0.\+0f, 1.\+0f), glm::\+vec3 \doxymbox{\hyperlink{class_camera_a97e7a4ff433ea2bfcbfd40469aaf4d83}{world\+Up}}=glm::\+vec3(0.\+0f, 1.\+0f, 0.\+0f), float \doxymbox{\hyperlink{class_camera_ad76701b22630f2df28a0ae15f0497a3a}{yaw}}=-\/90.\+0f, float \doxymbox{\hyperlink{class_camera_ab56fcb39f580e8d2159cf2c9c6d9a65a}{pitch}}=0.\+0f)
+\begin{DoxyCompactList}\small\item\em Constructs a 3D camera. \end{DoxyCompactList}\item 
+glm::\+mat4 \doxymbox{\hyperlink{class_camera_a2f90e661a78172675ca06ea69667b531}{get\+View\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Computes the view matrix of the camera. \end{DoxyCompactList}\item 
+glm::\+mat4 \doxymbox{\hyperlink{class_camera_a3bb21fdfb8bd8974c880a33741a549df}{get\+Projection\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Computes the projection matrix of the camera. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_camera_ad424b8b92e580508caf21337b69b93fa}{update\+Camera\+Vectors}} ()
+\begin{DoxyCompactList}\small\item\em Recomputes the camera orientation vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_camera_a2a4da80c688f35015fa2667cdb7890a5}\label{class_camera_a2a4da80c688f35015fa2667cdb7890a5} 
+glm::\+vec3 {\bfseries C}
+\begin{DoxyCompactList}\small\item\em The camera position in the WCS. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a97e7a4ff433ea2bfcbfd40469aaf4d83}\label{class_camera_a97e7a4ff433ea2bfcbfd40469aaf4d83} 
+glm::\+vec3 {\bfseries world\+Up}
+\begin{DoxyCompactList}\small\item\em Vertical versor in the WCS. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_ad76701b22630f2df28a0ae15f0497a3a}\label{class_camera_ad76701b22630f2df28a0ae15f0497a3a} 
+float {\bfseries yaw}
+\begin{DoxyCompactList}\small\item\em The camera rotation around its vertical axis \+[degrees]\+. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_ab56fcb39f580e8d2159cf2c9c6d9a65a}\label{class_camera_ab56fcb39f580e8d2159cf2c9c6d9a65a} 
+float {\bfseries pitch}
+\begin{DoxyCompactList}\small\item\em The camera rotation around its horizontal axis \+[degrees]\+. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_aff7393c9cfbccd7e369091f00008da93}\label{class_camera_aff7393c9cfbccd7e369091f00008da93} 
+float {\bfseries fov} = 60.\+0f
+\begin{DoxyCompactList}\small\item\em The camera vertical fov (Open\+GL standard) \+[degrees]\+. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_aa6f013fdb4560daaa5ca6ace1a846ca7}\label{class_camera_aa6f013fdb4560daaa5ca6ace1a846ca7} 
+float {\bfseries aspect\+Ratio} = 16.\+0f /\+ 9.\+0f
+\begin{DoxyCompactList}\small\item\em The viewport aspect ratio. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a78d8722a95e4f7770d79c950bda2bfdc}\label{class_camera_a78d8722a95e4f7770d79c950bda2bfdc} 
+float {\bfseries near\+Plane} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Near clipping plane distance. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a8e8436cced3a180e13bfafa0791fb82a}\label{class_camera_a8e8436cced3a180e13bfafa0791fb82a} 
+float {\bfseries far\+Plane} = 100.\+0f
+\begin{DoxyCompactList}\small\item\em Far clipping plane distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A 3D camera. 
+
+A 3D camera which contains:\+
+\begin{DoxyItemize}
+\item position
+\item orientation
+\item projection parameters 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_camera_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_camera_a5dac6554771b6f4eb48f1f40773e5e38}\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily \label{class_camera_a5dac6554771b6f4eb48f1f40773e5e38} 
+Camera::\+\+Camera (\begin{DoxyParamCaption}\item[{glm::\+vec3}]{C}{ = {\ttfamily glm:\+:\+vec3(0.0f,~0.0f,~1.0f)}, }\item[{glm::\+vec3}]{world\+Up}{ = {\ttfamily glm:\+:\+vec3(0.0f,~1.0f,~0.0f)}, }\item[{float}]{yaw}{ = {\ttfamily -\/90.0f}, }\item[{float}]{pitch}{ = {\ttfamily 0.0f}}\end{DoxyParamCaption})}
+
+
+
+Constructs a 3D camera. 
+
+Initializes the camera in world space with a given position and orientation. The orientation is defined using yaw (horizontal rotation) and pitch (vertical rotation).
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_camera_a2a4da80c688f35015fa2667cdb7890a5}{C}} & Initial position of the camera in world space \\
+\hline
+{\em \doxylink{class_camera_a97e7a4ff433ea2bfcbfd40469aaf4d83}{world\+Up}} & World up direction used as reference for camera basis construction \\
+\hline
+{\em \doxylink{class_camera_ad76701b22630f2df28a0ae15f0497a3a}{yaw}} & Initial horizontal rotation (in degrees) \\
+\hline
+{\em \doxylink{class_camera_ab56fcb39f580e8d2159cf2c9c6d9a65a}{pitch}} & Initial vertical rotation (in degrees)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After construction, camera direction vectors are computed automatically. 
+\end{DoxyNote}
+
+
+\label{doc-func-members}
+\Hypertarget{class_camera_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_a3bb21fdfb8bd8974c880a33741a549df}\index{Camera@{Camera}!getProjectionMatrix@{getProjectionMatrix}}
+\index{getProjectionMatrix@{getProjectionMatrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getProjectionMatrix()}{getProjectionMatrix()}}
+{\footnotesize\ttfamily \label{class_camera_a3bb21fdfb8bd8974c880a33741a549df} 
+glm::\+mat4 Camera::\+get\+Projection\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes the projection matrix of the camera. 
+
+Builds a perspective projection matrix using the camera parameters:\+ field of view, aspect ratio, and near/\+far clipping planes.
+
+This matrix transforms view space coordinates into clip space.
+
+\begin{DoxyReturn}{Returns}
+glm::\+mat4 Perspective projection matrix
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Uses Open\+GL convention with depth range \+[-\/1, 1]\+ 
+\end{DoxyNote}
+\Hypertarget{class_camera_a2f90e661a78172675ca06ea69667b531}\index{Camera@{Camera}!getViewMatrix@{getViewMatrix}}
+\index{getViewMatrix@{getViewMatrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getViewMatrix()}{getViewMatrix()}}
+{\footnotesize\ttfamily \label{class_camera_a2f90e661a78172675ca06ea69667b531} 
+glm::\+mat4 Camera::\+get\+View\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes the view matrix of the camera. 
+
+The view matrix transforms WCS into CCS. It is built using the camera position and its orientation vectors.
+
+\begin{DoxyReturn}{Returns}
+glm::\+mat4 View matrix transforming world space to camera space
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Uses a right-\/handed coordinate system (Open\+GL convention) 
+\end{DoxyNote}
+\Hypertarget{class_camera_a2fd7432c0256ad790097b87c018c4b3f}\index{Camera@{Camera}!setAspectRatio@{setAspectRatio}}
+\index{setAspectRatio@{setAspectRatio}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setAspectRatio()}{setAspectRatio()}}
+{\footnotesize\ttfamily \label{class_camera_a2fd7432c0256ad790097b87c018c4b3f} 
+void Camera::\+set\+Aspect\+Ratio (\begin{DoxyParamCaption}\item[{float}]{new\+Aspect\+Ratio}{}\end{DoxyParamCaption})}
+
+
+
+Sets the aspect ratio of the viewport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Aspect\+Ratio} & Width /\+ height ratio (must be \texorpdfstring{$>$}{>} 0) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a3c35a632a9f8d81889ef0513ac8eba35}\index{Camera@{Camera}!setFarPlane@{setFarPlane}}
+\index{setFarPlane@{setFarPlane}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setFarPlane()}{setFarPlane()}}
+{\footnotesize\ttfamily \label{class_camera_a3c35a632a9f8d81889ef0513ac8eba35} 
+void Camera::\+set\+Far\+Plane (\begin{DoxyParamCaption}\item[{float}]{new\+Far\+Plane}{}\end{DoxyParamCaption})}
+
+
+
+Sets far clipping plane distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Far\+Plane} & Must be \texorpdfstring{$>$}{>} near\+Plane \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_aa626c27241aa2749821bb4ac3dca483a}\index{Camera@{Camera}!setFov@{setFov}}
+\index{setFov@{setFov}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setFov()}{setFov()}}
+{\footnotesize\ttfamily \label{class_camera_aa626c27241aa2749821bb4ac3dca483a} 
+void Camera::\+set\+Fov (\begin{DoxyParamCaption}\item[{float}]{new\+Fov}{}\end{DoxyParamCaption})}
+
+
+
+Sets the vertical field of view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Fov} & Field of view in degrees (clamped to avoid extreme distortion) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a733fb6fc530d03f207fd34c4006a310e}\index{Camera@{Camera}!setNearPlane@{setNearPlane}}
+\index{setNearPlane@{setNearPlane}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setNearPlane()}{setNearPlane()}}
+{\footnotesize\ttfamily \label{class_camera_a733fb6fc530d03f207fd34c4006a310e} 
+void Camera::\+set\+Near\+Plane (\begin{DoxyParamCaption}\item[{float}]{new\+Near\+Plane}{}\end{DoxyParamCaption})}
+
+
+
+Sets near clipping plane distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Near\+Plane} & Must be \texorpdfstring{$>$}{>} 0 and \texorpdfstring{$<$}{<} far\+Plane \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a5cb6768d252de0ec2922d4638868844d}\index{Camera@{Camera}!setPitch@{setPitch}}
+\index{setPitch@{setPitch}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setPitch()}{setPitch()}}
+{\footnotesize\ttfamily \label{class_camera_a5cb6768d252de0ec2922d4638868844d} 
+void Camera::\+set\+Pitch (\begin{DoxyParamCaption}\item[{float}]{new\+Pitch}{}\end{DoxyParamCaption})}
+
+
+
+Sets the camera pitch angle. 
+
+Defines the vertical rotation around the camera right axis (X axis). Controls the up/\+down viewing direction.
+
+Pitch is typically clamped to avoid gimbal lock and unstable behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Pitch} & New pitch angle \+[degrees]\+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a43beb93105ae5a91c1948ae577a654e0}\index{Camera@{Camera}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{class_camera_a43beb93105ae5a91c1948ae577a654e0} 
+void Camera::\+set\+Position (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{new\+Position}{}\end{DoxyParamCaption})}
+
+
+
+Sets the camera position in WCS. 
+
+Updates the camera position and marks the internal orientation as potentially outdated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & New camera position in world space \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a1df2aa14e936b9a77d300901d9bf10aa}\index{Camera@{Camera}!setWorldUp@{setWorldUp}}
+\index{setWorldUp@{setWorldUp}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setWorldUp()}{setWorldUp()}}
+{\footnotesize\ttfamily \label{class_camera_a1df2aa14e936b9a77d300901d9bf10aa} 
+void Camera::\+set\+World\+Up (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{new\+World\+Up}{}\end{DoxyParamCaption})}
+
+
+
+Sets the world up vector. 
+
+Defines the global up direction used to build the camera basis. Changing this affects the orientation computation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+World\+Up} & New world up vector (must not be zero) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a97dcca00ac357426bc7ef9e99040aaee}\index{Camera@{Camera}!setYaw@{setYaw}}
+\index{setYaw@{setYaw}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setYaw()}{setYaw()}}
+{\footnotesize\ttfamily \label{class_camera_a97dcca00ac357426bc7ef9e99040aaee} 
+void Camera::\+set\+Yaw (\begin{DoxyParamCaption}\item[{float}]{new\+Yaw}{}\end{DoxyParamCaption})}
+
+
+
+Sets the camera yaw angle. 
+
+Defines the horizontal rotation around the world up axis (Y axis). This affects the camera\textquotesingle{}s left/\+right viewing direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Yaw} & New yaw angle \+[degrees]\+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_ad424b8b92e580508caf21337b69b93fa}\index{Camera@{Camera}!updateCameraVectors@{updateCameraVectors}}
+\index{updateCameraVectors@{updateCameraVectors}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{updateCameraVectors()}{updateCameraVectors()}}
+{\footnotesize\ttfamily \label{class_camera_ad424b8b92e580508caf21337b69b93fa} 
+void Camera::\+update\+Camera\+Vectors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recomputes the camera orientation vectors. 
+
+Updates the forward, right, and up vectors based on the current yaw and pitch. This ensures that the camera basis remains orthonormal.
+
+Must be called after modifying yaw or pitch.
+
+\begin{DoxyNote}{Note}
+This function maintains a right-\/handed coordinate system. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+core/\+Camera.\+h\item 
+src/\+core/\+Camera.\+cpp\end{DoxyCompactItemize}

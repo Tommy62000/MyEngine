@@ -1,0 +1,84 @@
+\begin{theindex}
+
+  \item {AssetManager}, \hyperpage{5}
+
+  \indexspace
+
+  \item {Camera}, \hyperpage{5}
+    \subitem {Camera}, \hyperpage{7}
+    \subitem {getProjectionMatrix}, \hyperpage{8}
+    \subitem {getViewMatrix}, \hyperpage{8}
+    \subitem {setAspectRatio}, \hyperpage{8}
+    \subitem {setFarPlane}, \hyperpage{9}
+    \subitem {setFov}, \hyperpage{9}
+    \subitem {setNearPlane}, \hyperpage{9}
+    \subitem {setPitch}, \hyperpage{9}
+    \subitem {setPosition}, \hyperpage{10}
+    \subitem {setWorldUp}, \hyperpage{10}
+    \subitem {setYaw}, \hyperpage{10}
+    \subitem {updateCameraVectors}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Engine}, \hyperpage{11}
+
+  \indexspace
+
+  \item {getProjectionMatrix}
+    \subitem {Camera}, \hyperpage{8}
+  \item {getViewMatrix}
+    \subitem {Camera}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Logger}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Mesh}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Renderer}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Scene}, \hyperpage{12}
+  \item {setAspectRatio}
+    \subitem {Camera}, \hyperpage{8}
+  \item {setFarPlane}
+    \subitem {Camera}, \hyperpage{9}
+  \item {setFov}
+    \subitem {Camera}, \hyperpage{9}
+  \item {setNearPlane}
+    \subitem {Camera}, \hyperpage{9}
+  \item {setPitch}
+    \subitem {Camera}, \hyperpage{9}
+  \item {setPosition}
+    \subitem {Camera}, \hyperpage{10}
+  \item {setWorldUp}
+    \subitem {Camera}, \hyperpage{10}
+  \item {setYaw}
+    \subitem {Camera}, \hyperpage{10}
+  \item {Shader}, \hyperpage{13}
+  \item {src/core/Camera.h}, \hyperpage{15}
+  \item {src/core/engine/AssetManager.h}, \hyperpage{16}
+  \item {src/core/engine/Engine.h}, \hyperpage{16}
+  \item {src/core/log/Log.h}, \hyperpage{16}
+  \item {src/core/log/Logger.h}, \hyperpage{16}
+  \item {src/core/Mesh.h}, \hyperpage{16}
+  \item {src/core/Scene.h}, \hyperpage{17}
+  \item {src/core/Window.h}, \hyperpage{17}
+  \item {src/renderer/Renderer.h}, \hyperpage{17}
+  \item {src/renderer/Shader.h}, \hyperpage{18}
+
+  \indexspace
+
+  \item {updateCameraVectors}
+    \subitem {Camera}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Window}, \hyperpage{13}
+
+\end{theindex}

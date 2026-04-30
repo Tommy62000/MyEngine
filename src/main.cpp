@@ -29,6 +29,7 @@ int main() {
     // Create the Scene
     Scene scene;
 
+    // Test triangle
     std::vector<float> vertices = {
         -0.5f, -0.5f, 0.0f,
         0.5f, -0.5f, 0.0f,
@@ -37,6 +38,13 @@ int main() {
 
     std::vector<unsigned int> indices = {
         0, 1, 2
+    };
+
+    // Test triangle 2
+    std::vector<float> vertices2 = {
+        0.5f, 0.5f, -1.0f,
+        -0.5f, 0.5f, -1.0f,
+        0.0f,  -0.5f, -1.0f
     };
 
     // Create the camera
@@ -49,6 +57,7 @@ int main() {
     camera.setAspectRatio((float) width / (float) height);
 
     scene.addMesh(std::make_unique<Mesh>(vertices, indices));
+    scene.addMesh(std::make_unique<Mesh>(vertices2, indices));
 
     while (!window.shouldClose()) {
         renderer.clear();

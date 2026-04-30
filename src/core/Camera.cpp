@@ -17,16 +17,53 @@ Camera::Camera(glm::vec3 C,
     updateCameraVectors();
 }
 
-void Camera::setFov(float newFov) {
-    fov = newFov;
-
-    // Clamp
-    if (fov < 1.0f) fov = 1.0f;
-    if (fov > 120.0f) fov = 120.0f;
+void Camera::setPosition(const glm::vec3& newPosition)
+{
+    C = newPosition;
 }
 
-void Camera::setAspectRatio(float newAspectRatio) {
-    aspectRatio = newAspectRatio;
+void Camera::setWorldUp(const glm::vec3& newWorldUp)
+{
+    if (glm::length(newWorldUp) > 0.0f)
+    {
+        worldUp = glm::normalize(newWorldUp);
+        updateCameraVectors();
+    }
+}
+
+void Camera::setYaw(float newYaw)
+{
+    yaw = newYaw;
+    updateCameraVectors();
+}
+
+void Camera::setPitch(float newPitch)
+{
+    pitch = glm::clamp(newPitch, -89.0f, 89.0f);
+    updateCameraVectors();
+}
+
+void Camera::setFov(float newFov)
+{
+    fov = glm::clamp(newFov, 1.0f, 120.0f);
+}
+
+void Camera::setAspectRatio(float newAspectRatio)
+{
+    if (newAspectRatio > 0.0f)
+        aspectRatio = newAspectRatio;
+}
+
+void Camera::setNearPlane(float newNearPlane)
+{
+    if (newNearPlane > 0.0f && newNearPlane < farPlane)
+        nearPlane = newNearPlane;
+}
+
+void Camera::setFarPlane(float newFarPlane)
+{
+    if (newFarPlane > nearPlane)
+        farPlane = newFarPlane;
 }
 
 glm::mat4 Camera::getViewMatrix() const

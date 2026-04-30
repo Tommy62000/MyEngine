@@ -1,0 +1,34 @@
+\doxysection{Mesh.\+h}
+\hypertarget{_mesh_8h_source}{}\label{_mesh_8h_source}\index{src/core/Mesh.h@{src/core/Mesh.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glad/glad.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <glm/gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Mesh\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ Mesh(\textcolor{keyword}{const}\ std::vector<float>\&\ vertices,}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<unsigned\ int>\&\ indices);}
+\DoxyCodeLine{00012\ \ \ \ \ \string~Mesh();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ draw()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Transform}}
+\DoxyCodeLine{00017\ \ \ \ \ glm::vec3\ position\ \{0.0f\};}
+\DoxyCodeLine{00018\ \ \ \ \ glm::vec3\ rotation\ \{0.0f\};\ \textcolor{comment}{//\ gradi}}
+\DoxyCodeLine{00019\ \ \ \ \ glm::vec3\ scale\ \ \ \ \{1.0f\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ glm::mat4\ getModelMatrix()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ VAO;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ VBO;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ EBO;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indexCount;}
+\DoxyCodeLine{00028\ \};}
+
+\end{DoxyCode}

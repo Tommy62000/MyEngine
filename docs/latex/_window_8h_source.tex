@@ -1,0 +1,25 @@
+\doxysection{Window.\+h}
+\hypertarget{_window_8h_source}{}\label{_window_8h_source}\index{src/core/Window.h@{src/core/Window.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ GLFW\_INCLUDE\_NONE}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }Window\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ Window(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title);}
+\DoxyCodeLine{00009\ \ \ \ \ \string~Window();}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ shouldClose();}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ pollEvents();}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ swapBuffers();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ GLFWwindow*\ getNativeWindow();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ GLFWwindow*\ window;}
+\DoxyCodeLine{00019\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,21 @@
+\doxysection{Scene.\+h}
+\hypertarget{_scene_8h_source}{}\label{_scene_8h_source}\index{src/core/Scene.h@{src/core/Scene.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Mesh.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_scene}{Scene}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ addMesh(std::unique\_ptr<Mesh>\ mesh);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::unique\_ptr<Mesh>>\&\ getMeshes()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ std::vector<std::unique\_ptr<Mesh>>\ meshes;}
+\DoxyCodeLine{00015\ \};}
+
+\end{DoxyCode}
