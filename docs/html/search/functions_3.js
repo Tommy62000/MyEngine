@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_0',['init',['../class_renderer.html#a26abbb3bdc9dae7fe089a8ea7d1b9a30',1,'Renderer']]]
+  ['error_0',['Error',['../class_logger.html#ac7d37ae671341cd39c80d4e4fbe0860b',1,'Logger']]]
 ];

@@ -59,7 +59,7 @@ public:
      *
      * Order of transformations:
      * 1. Scale
-     * 2. Rotate (Z → Y → X or implementation-defined)
+     * 2. Rotate (Z -> Y -> X or implementation-defined)
      * 3. Translate
      *
      * @return glm::mat4 Model matrix

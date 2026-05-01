@@ -1,11 +1,49 @@
 \doxysection{Asset\+Manager Class Reference}
 \hypertarget{class_asset_manager}{}\label{class_asset_manager}\index{AssetManager@{AssetManager}}
+
+
+Utility class for resolving asset paths.  
+
+
+
+
+{\ttfamily \+\#include $<$Asset\+Manager.\+h$>$}
+
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_asset_manager_ae32ffebefe3a8520af22558df0469a58}\label{class_asset_manager_ae32ffebefe3a8520af22558df0469a58} 
-static std::\+string {\bfseries shader} (const std::\+string \&file)
-\end{DoxyCompactItemize}
+static std::\+string \doxymbox{\hyperlink{class_asset_manager_ae32ffebefe3a8520af22558df0469a58}{shader}} (const std::\+string \&file)
+\begin{DoxyCompactList}\small\item\em Returns the full path to a shader file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility class for resolving asset paths. 
+
+\doxylink{class_asset_manager}{Asset\+Manager} provides helper functions to construct paths to engine resources such as shaders, textures, and other assets. It is designed as a static-\/only utility class. 
+
+\label{doc-func-members}
+\Hypertarget{class_asset_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_asset_manager_ae32ffebefe3a8520af22558df0469a58}\index{AssetManager@{AssetManager}!shader@{shader}}
+\index{shader@{shader}!AssetManager@{AssetManager}}
+\doxysubsubsection{\texorpdfstring{shader()}{shader()}}
+{\footnotesize\ttfamily \label{class_asset_manager_ae32ffebefe3a8520af22558df0469a58} 
+std::\+string Asset\+Manager::\+shader (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{file}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the full path to a shader file. 
+
+Constructs a valid path to a shader resource based on the engine\textquotesingle{}s asset directory structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the shader file (relative path or filename). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Full resolved path to the shader file. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}

@@ -1,24 +1,118 @@
 \doxysection{Window Class Reference}
 \hypertarget{class_window}{}\label{class_window}\index{Window@{Window}}
+
+
+Encapsulates a GLFW window and its basic lifecycle.  
+
+
+
+
+{\ttfamily \+\#include $<$Window.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_window_ae89eca69609390f224bdd9e37cb91b2c}\label{class_window_ae89eca69609390f224bdd9e37cb91b2c} 
-{\bfseries Window} (int width, int height, const char \texorpdfstring{$\ast$}{*}title)
-\item 
-\Hypertarget{class_window_ae779be3a5327f62c5e86a3e3d8a37289}\label{class_window_ae779be3a5327f62c5e86a3e3d8a37289} 
-bool {\bfseries should\+Close} ()
-\item 
-\Hypertarget{class_window_aa5e409ecd45b4430ed72f4872a8f667f}\label{class_window_aa5e409ecd45b4430ed72f4872a8f667f} 
-void {\bfseries poll\+Events} ()
-\item 
-\Hypertarget{class_window_af6ffedb8d12d5551bdb4c298de87ed56}\label{class_window_af6ffedb8d12d5551bdb4c298de87ed56} 
-void {\bfseries swap\+Buffers} ()
-\item 
-\Hypertarget{class_window_aff1c6d46dc964b39ac6a54a735330d13}\label{class_window_aff1c6d46dc964b39ac6a54a735330d13} 
-GLFWwindow \texorpdfstring{$\ast$}{*} {\bfseries get\+Native\+Window} ()
-\end{DoxyCompactItemize}
+\doxymbox{\hyperlink{class_window_ae89eca69609390f224bdd9e37cb91b2c}{Window}} (int width, int height, const char \texorpdfstring{$\ast$}{*}title)
+\begin{DoxyCompactList}\small\item\em Constructs a window with the given size and title. \end{DoxyCompactList}\item 
+\Hypertarget{class_window_a245d821e6016fa1f6970ccbbedd635f6}\label{class_window_a245d821e6016fa1f6970ccbbedd635f6} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destroys the window and releases GLFW resources. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_window_ae779be3a5327f62c5e86a3e3d8a37289}{should\+Close}} ()
+\begin{DoxyCompactList}\small\item\em Checks whether the window should close. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_window_aa5e409ecd45b4430ed72f4872a8f667f}{poll\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Polls window events. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_window_af6ffedb8d12d5551bdb4c298de87ed56}{swap\+Buffers}} ()
+\begin{DoxyCompactList}\small\item\em Swaps the front and back buffers. \end{DoxyCompactList}\item 
+GLFWwindow \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_window_aff1c6d46dc964b39ac6a54a735330d13}{get\+Native\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the underlying GLFW window pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Encapsulates a GLFW window and its basic lifecycle. 
+
+The \doxylink{class_window}{Window} class is a thin wrapper around a GLFWwindow pointer. It manages window creation, event polling, and buffer swapping. 
+
+\label{doc-constructors}
+\Hypertarget{class_window_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_window_ae89eca69609390f224bdd9e37cb91b2c}\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}}
+{\footnotesize\ttfamily \label{class_window_ae89eca69609390f224bdd9e37cb91b2c} 
+Window::\+\+Window (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a window with the given size and title. 
+
+Initializes a GLFW window and prepares it for rendering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the window in pixels. \\
+\hline
+{\em height} & Height of the window in pixels. \\
+\hline
+{\em title} & Title of the window. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_window_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_window_aff1c6d46dc964b39ac6a54a735330d13}\index{Window@{Window}!getNativeWindow@{getNativeWindow}}
+\index{getNativeWindow@{getNativeWindow}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{getNativeWindow()}{getNativeWindow()}}
+{\footnotesize\ttfamily \label{class_window_aff1c6d46dc964b39ac6a54a735330d13} 
+GLFWwindow \texorpdfstring{$\ast$}{*} Window::\+get\+Native\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the underlying GLFW window pointer. 
+
+\begin{DoxyReturn}{Returns}
+Raw pointer to the GLFWwindow instance.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Exposing the native pointer allows direct GLFW access, bypassing the \doxylink{class_window}{Window} abstraction. 
+\end{DoxyWarning}
+\Hypertarget{class_window_aa5e409ecd45b4430ed72f4872a8f667f}\index{Window@{Window}!pollEvents@{pollEvents}}
+\index{pollEvents@{pollEvents}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{pollEvents()}{pollEvents()}}
+{\footnotesize\ttfamily \label{class_window_aa5e409ecd45b4430ed72f4872a8f667f} 
+void Window::\+poll\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Polls window events. 
+
+Processes input, window events, and system messages. \Hypertarget{class_window_ae779be3a5327f62c5e86a3e3d8a37289}\index{Window@{Window}!shouldClose@{shouldClose}}
+\index{shouldClose@{shouldClose}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{shouldClose()}{shouldClose()}}
+{\footnotesize\ttfamily \label{class_window_ae779be3a5327f62c5e86a3e3d8a37289} 
+bool Window::\+should\+Close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks whether the window should close. 
+
+Typically used in the main loop condition.
+
+\begin{DoxyReturn}{Returns}
+true if the window has been requested to close, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_window_af6ffedb8d12d5551bdb4c298de87ed56}\index{Window@{Window}!swapBuffers@{swapBuffers}}
+\index{swapBuffers@{swapBuffers}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{swapBuffers()}{swapBuffers()}}
+{\footnotesize\ttfamily \label{class_window_af6ffedb8d12d5551bdb4c298de87ed56} 
+void Window::\+swap\+Buffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Swaps the front and back buffers. 
+
+Presents the rendered frame to the screen. 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
 \item 

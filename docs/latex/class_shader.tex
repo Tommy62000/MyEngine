@@ -1,24 +1,105 @@
 \doxysection{Shader Class Reference}
 \hypertarget{class_shader}{}\label{class_shader}\index{Shader@{Shader}}
+
+
+Encapsulates an Open\+GL shader program.  
+
+
+
+
+{\ttfamily \+\#include $<$Shader.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_shader_ad80a9756b7d9a62adea45fcd82a06f4c}\label{class_shader_ad80a9756b7d9a62adea45fcd82a06f4c} 
-{\bfseries Shader} (const std::\+string \&vertex\+Path, const std::\+string \&fragment\+Path)
-\item 
-\Hypertarget{class_shader_a870fa9f13d69e558815d6fd351a469dc}\label{class_shader_a870fa9f13d69e558815d6fd351a469dc} 
-void {\bfseries use} ()
-\item 
-\Hypertarget{class_shader_a8e711c96f3e1722cbfb88fde9478977c}\label{class_shader_a8e711c96f3e1722cbfb88fde9478977c} 
-void {\bfseries set\+Mat4} (const std::\+string \&name, const glm::\+mat4 \&mat) const
-\end{DoxyCompactItemize}
+\doxymbox{\hyperlink{class_shader_ad80a9756b7d9a62adea45fcd82a06f4c}{Shader}} (const std::\+string \&vertex\+Path, const std::\+string \&fragment\+Path)
+\begin{DoxyCompactList}\small\item\em Creates a shader program from vertex and fragment shader files. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_shader_a870fa9f13d69e558815d6fd351a469dc}{use}} ()
+\begin{DoxyCompactList}\small\item\em Activates the shader program. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_shader_a8e711c96f3e1722cbfb88fde9478977c}{set\+Mat4}} (const std::\+string \&name, const glm::\+mat4 \&mat) const
+\begin{DoxyCompactList}\small\item\em Sets a 4x4 matrix uniform in the shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}\label{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d} 
-unsigned int {\bfseries ID}
-\end{DoxyCompactItemize}
+unsigned int \doxymbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}
+\begin{DoxyCompactList}\small\item\em Open\+GL program ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Encapsulates an Open\+GL shader program. 
+
+The \doxylink{class_shader}{Shader} class handles loading, compiling, and linking vertex and fragment shaders into a single GPU program. It also provides utility functions for setting uniform values. 
+
+\label{doc-constructors}
+\Hypertarget{class_shader_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shader_ad80a9756b7d9a62adea45fcd82a06f4c}\index{Shader@{Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{Shader()}{Shader()}}
+{\footnotesize\ttfamily \label{class_shader_ad80a9756b7d9a62adea45fcd82a06f4c} 
+Shader::\+\+Shader (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{vertex\+Path}{, }\item[{const std::\+string \&}]{fragment\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Creates a shader program from vertex and fragment shader files. 
+
+Loads shader source code from the provided file paths, compiles them, and links them into a single Open\+GL shader program.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Path} & Path to the vertex shader source file. \\
+\hline
+{\em fragment\+Path} & Path to the fragment shader source file. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_shader_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shader_a8e711c96f3e1722cbfb88fde9478977c}\index{Shader@{Shader}!setMat4@{setMat4}}
+\index{setMat4@{setMat4}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{setMat4()}{setMat4()}}
+{\footnotesize\ttfamily \label{class_shader_a8e711c96f3e1722cbfb88fde9478977c} 
+void Shader::\+set\+Mat4 (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const glm::\+mat4 \&}]{mat}{}\end{DoxyParamCaption}) const}
+
+
+
+Sets a 4x4 matrix uniform in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the uniform variable in the shader. \\
+\hline
+{\em mat} & 4x4 matrix value to upload. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shader_a870fa9f13d69e558815d6fd351a469dc}\index{Shader@{Shader}!use@{use}}
+\index{use@{use}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily \label{class_shader_a870fa9f13d69e558815d6fd351a469dc} 
+void Shader::\+use (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Activates the shader program. 
+
+Makes this shader the current active program for rendering. 
+
+\label{doc-variable-members}
+\Hypertarget{class_shader_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}\index{Shader@{Shader}!ID@{ID}}
+\index{ID@{ID}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily \label{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d} 
+unsigned int Shader::\+\+ID}
+
+
+
+Open\+GL program ID. 
+
+This is the identifier of the compiled and linked shader program used internally by Open\+GL. 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
 \item 

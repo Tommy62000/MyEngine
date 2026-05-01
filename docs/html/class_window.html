@@ -91,20 +91,152 @@ $(function(){initNavTree('class_window.html','','class_window-members'); });
   <div class="headertitle"><div class="title">Window Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Encapsulates a GLFW window and its basic lifecycle.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_window_8h_source.html">Window.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae89eca69609390f224bdd9e37cb91b2c" id="r_ae89eca69609390f224bdd9e37cb91b2c"><td class="memItemLeft"><a id="ae89eca69609390f224bdd9e37cb91b2c" name="ae89eca69609390f224bdd9e37cb91b2c"></a>
-&#160;</td><td class="memItemRight"><b>Window</b> (int width, int height, const char *title)</td></tr>
-<tr class="memitem:ae779be3a5327f62c5e86a3e3d8a37289" id="r_ae779be3a5327f62c5e86a3e3d8a37289"><td class="memItemLeft"><a id="ae779be3a5327f62c5e86a3e3d8a37289" name="ae779be3a5327f62c5e86a3e3d8a37289"></a>
-bool&#160;</td><td class="memItemRight"><b>shouldClose</b> ()</td></tr>
-<tr class="memitem:aa5e409ecd45b4430ed72f4872a8f667f" id="r_aa5e409ecd45b4430ed72f4872a8f667f"><td class="memItemLeft"><a id="aa5e409ecd45b4430ed72f4872a8f667f" name="aa5e409ecd45b4430ed72f4872a8f667f"></a>
-void&#160;</td><td class="memItemRight"><b>pollEvents</b> ()</td></tr>
-<tr class="memitem:af6ffedb8d12d5551bdb4c298de87ed56" id="r_af6ffedb8d12d5551bdb4c298de87ed56"><td class="memItemLeft"><a id="af6ffedb8d12d5551bdb4c298de87ed56" name="af6ffedb8d12d5551bdb4c298de87ed56"></a>
-void&#160;</td><td class="memItemRight"><b>swapBuffers</b> ()</td></tr>
-<tr class="memitem:aff1c6d46dc964b39ac6a54a735330d13" id="r_aff1c6d46dc964b39ac6a54a735330d13"><td class="memItemLeft"><a id="aff1c6d46dc964b39ac6a54a735330d13" name="aff1c6d46dc964b39ac6a54a735330d13"></a>
-GLFWwindow *&#160;</td><td class="memItemRight"><b>getNativeWindow</b> ()</td></tr>
+<tr class="memitem:ae89eca69609390f224bdd9e37cb91b2c" id="r_ae89eca69609390f224bdd9e37cb91b2c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae89eca69609390f224bdd9e37cb91b2c">Window</a> (int width, int height, const char *title)</td></tr>
+<tr class="memdesc:ae89eca69609390f224bdd9e37cb91b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a window with the given size and title.  <br /></td></tr>
+<tr class="memitem:a245d821e6016fa1f6970ccbbedd635f6" id="r_a245d821e6016fa1f6970ccbbedd635f6"><td class="memItemLeft"><a id="a245d821e6016fa1f6970ccbbedd635f6" name="a245d821e6016fa1f6970ccbbedd635f6"></a>
+&#160;</td><td class="memItemRight"><b>~Window</b> ()</td></tr>
+<tr class="memdesc:a245d821e6016fa1f6970ccbbedd635f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the window and releases GLFW resources. <br /></td></tr>
+<tr class="memitem:ae779be3a5327f62c5e86a3e3d8a37289" id="r_ae779be3a5327f62c5e86a3e3d8a37289"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae779be3a5327f62c5e86a3e3d8a37289">shouldClose</a> ()</td></tr>
+<tr class="memdesc:ae779be3a5327f62c5e86a3e3d8a37289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the window should close.  <br /></td></tr>
+<tr class="memitem:aa5e409ecd45b4430ed72f4872a8f667f" id="r_aa5e409ecd45b4430ed72f4872a8f667f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5e409ecd45b4430ed72f4872a8f667f">pollEvents</a> ()</td></tr>
+<tr class="memdesc:aa5e409ecd45b4430ed72f4872a8f667f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polls window events.  <br /></td></tr>
+<tr class="memitem:af6ffedb8d12d5551bdb4c298de87ed56" id="r_af6ffedb8d12d5551bdb4c298de87ed56"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af6ffedb8d12d5551bdb4c298de87ed56">swapBuffers</a> ()</td></tr>
+<tr class="memdesc:af6ffedb8d12d5551bdb4c298de87ed56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the front and back buffers.  <br /></td></tr>
+<tr class="memitem:aff1c6d46dc964b39ac6a54a735330d13" id="r_aff1c6d46dc964b39ac6a54a735330d13"><td class="memItemLeft">GLFWwindow *&#160;</td><td class="memItemRight"><a class="el" href="#aff1c6d46dc964b39ac6a54a735330d13">getNativeWindow</a> ()</td></tr>
+<tr class="memdesc:aff1c6d46dc964b39ac6a54a735330d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the underlying GLFW window pointer.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Encapsulates a GLFW window and its basic lifecycle. </p>
+<p>The <a class="el" href="class_window.html" title="Encapsulates a GLFW window and its basic lifecycle.">Window</a> class is a thin wrapper around a GLFWwindow pointer. It manages window creation, event polling, and buffer swapping. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae89eca69609390f224bdd9e37cb91b2c" name="ae89eca69609390f224bdd9e37cb91b2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae89eca69609390f224bdd9e37cb91b2c">&#9670;&#160;</a></span>Window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a window with the given size and title. </p>
+<p>Initializes a GLFW window and prepares it for rendering.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Width of the window in pixels. </td></tr>
+    <tr><td class="paramname">height</td><td>Height of the window in pixels. </td></tr>
+    <tr><td class="paramname">title</td><td>Title of the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aff1c6d46dc964b39ac6a54a735330d13" name="aff1c6d46dc964b39ac6a54a735330d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1c6d46dc964b39ac6a54a735330d13">&#9670;&#160;</a></span>getNativeWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLFWwindow * Window::getNativeWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the underlying GLFW window pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd>Raw pointer to the GLFWwindow instance.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Exposing the native pointer allows direct GLFW access, bypassing the <a class="el" href="class_window.html" title="Encapsulates a GLFW window and its basic lifecycle.">Window</a> abstraction. </dd></dl>
+
+</div>
+</div>
+<a id="aa5e409ecd45b4430ed72f4872a8f667f" name="aa5e409ecd45b4430ed72f4872a8f667f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5e409ecd45b4430ed72f4872a8f667f">&#9670;&#160;</a></span>pollEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Window::pollEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Polls window events. </p>
+<p>Processes input, window events, and system messages. </p>
+
+</div>
+</div>
+<a id="ae779be3a5327f62c5e86a3e3d8a37289" name="ae779be3a5327f62c5e86a3e3d8a37289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae779be3a5327f62c5e86a3e3d8a37289">&#9670;&#160;</a></span>shouldClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Window::shouldClose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whether the window should close. </p>
+<p>Typically used in the main loop condition.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the window has been requested to close, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="af6ffedb8d12d5551bdb4c298de87ed56" name="af6ffedb8d12d5551bdb4c298de87ed56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ffedb8d12d5551bdb4c298de87ed56">&#9670;&#160;</a></span>swapBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Window::swapBuffers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Swaps the front and back buffers. </p>
+<p>Presents the rendered frame to the screen. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/<a class="el" href="_window_8h_source.html">Window.h</a></li>
 <li>src/core/<b>Window.cpp</b></li>

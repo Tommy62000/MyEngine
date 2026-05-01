@@ -91,16 +91,122 @@ $(function(){initNavTree('class_engine.html','','class_engine-members'); });
   <div class="headertitle"><div class="title">Engine Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Global engine utility class.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_engine_8h_source.html">Engine.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a611b73786867f92149f8f69cae60b76a" id="r_a611b73786867f92149f8f69cae60b76a"><td class="memItemLeft"><a id="a611b73786867f92149f8f69cae60b76a" name="a611b73786867f92149f8f69cae60b76a"></a>
-static void&#160;</td><td class="memItemRight"><b>init</b> (const std::string &amp;projectRoot)</td></tr>
-<tr class="memitem:afdfd1b37e6d4d072f2b0bc02f29b6186" id="r_afdfd1b37e6d4d072f2b0bc02f29b6186"><td class="memItemLeft"><a id="afdfd1b37e6d4d072f2b0bc02f29b6186" name="afdfd1b37e6d4d072f2b0bc02f29b6186"></a>
-static const std::string &amp;&#160;</td><td class="memItemRight"><b>root</b> ()</td></tr>
-<tr class="memitem:adebbee1ddcbbbd467819030ed200763b" id="r_adebbee1ddcbbbd467819030ed200763b"><td class="memItemLeft"><a id="adebbee1ddcbbbd467819030ed200763b" name="adebbee1ddcbbbd467819030ed200763b"></a>
-static std::string&#160;</td><td class="memItemRight"><b>assetPath</b> (const std::string &amp;relativePath)</td></tr>
+<tr class="memitem:a611b73786867f92149f8f69cae60b76a" id="r_a611b73786867f92149f8f69cae60b76a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a611b73786867f92149f8f69cae60b76a">init</a> (const std::string &amp;projectRoot)</td></tr>
+<tr class="memdesc:a611b73786867f92149f8f69cae60b76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine with the project root directory.  <br /></td></tr>
+<tr class="memitem:afdfd1b37e6d4d072f2b0bc02f29b6186" id="r_afdfd1b37e6d4d072f2b0bc02f29b6186"><td class="memItemLeft">static const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afdfd1b37e6d4d072f2b0bc02f29b6186">root</a> ()</td></tr>
+<tr class="memdesc:afdfd1b37e6d4d072f2b0bc02f29b6186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the engine root directory.  <br /></td></tr>
+<tr class="memitem:adebbee1ddcbbbd467819030ed200763b" id="r_adebbee1ddcbbbd467819030ed200763b"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#adebbee1ddcbbbd467819030ed200763b">assetPath</a> (const std::string &amp;relativePath)</td></tr>
+<tr class="memdesc:adebbee1ddcbbbd467819030ed200763b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds an absolute path to an asset.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Global engine utility class. </p>
+<p>The <a class="el" href="class_engine.html" title="Global engine utility class.">Engine</a> class provides access to engine-wide configuration and utility functions such as project root handling and asset path resolution. It is designed as a static-only class. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="adebbee1ddcbbbd467819030ed200763b" name="adebbee1ddcbbbd467819030ed200763b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adebbee1ddcbbbd467819030ed200763b">&#9670;&#160;</a></span>assetPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Engine::assetPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>relativePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Builds an absolute path to an asset. </p>
+<p>Concatenates the engine root path with a relative asset path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">relativePath</td><td>Path relative to the project root. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Full resolved path to the asset. </dd></dl>
+
+</div>
+</div>
+<a id="a611b73786867f92149f8f69cae60b76a" name="a611b73786867f92149f8f69cae60b76a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a611b73786867f92149f8f69cae60b76a">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::init </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>projectRoot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the engine with the project root directory. </p>
+<p>This function must be called before using any other <a class="el" href="class_engine.html" title="Global engine utility class.">Engine</a> functionality.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">projectRoot</td><td>Absolute or relative path to the root of the project. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afdfd1b37e6d4d072f2b0bc02f29b6186" name="afdfd1b37e6d4d072f2b0bc02f29b6186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdfd1b37e6d4d072f2b0bc02f29b6186">&#9670;&#160;</a></span>root()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Engine::root </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the engine root directory. </p>
+<dl class="section return"><dt>Returns</dt><dd>Constant reference to the stored root path. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/engine/<a class="el" href="_engine_8h_source.html">Engine.h</a></li>
 <li>src/core/engine/<b>Engine.cpp</b></li>

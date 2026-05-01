@@ -95,23 +95,32 @@ $(function(){initNavTree('_window_8h_source.html','',''); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define GLFW_INCLUDE_NONE</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_window.html">    6</a></span><span class="keyword">class </span>Window {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    Window(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keyword">const</span> <span class="keywordtype">char</span>* title);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    ~Window();</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> shouldClose();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> pollEvents();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> swapBuffers();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    GLFWwindow* getNativeWindow();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    GLFWwindow* window;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_window.html">   12</a></span><span class="keyword">class </span><a class="code hl_function" href="class_window.html#ae89eca69609390f224bdd9e37cb91b2c">Window</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_window.html#ae89eca69609390f224bdd9e37cb91b2c">Window</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keyword">const</span> <span class="keywordtype">char</span>* title);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="class_window.html#a245d821e6016fa1f6970ccbbedd635f6">~Window</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_window.html#ae779be3a5327f62c5e86a3e3d8a37289">shouldClose</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_window.html#aa5e409ecd45b4430ed72f4872a8f667f">pollEvents</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_window.html#af6ffedb8d12d5551bdb4c298de87ed56">swapBuffers</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    GLFWwindow* <a class="code hl_function" href="class_window.html#aff1c6d46dc964b39ac6a54a735330d13">getNativeWindow</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    GLFWwindow* window;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
 </div>
+<div class="ttc" id="aclass_window_html_a245d821e6016fa1f6970ccbbedd635f6"><div class="ttname"><a href="class_window.html#a245d821e6016fa1f6970ccbbedd635f6">Window::~Window</a></div><div class="ttdeci">~Window()</div><div class="ttdoc">Destroys the window and releases GLFW resources.</div><div class="ttdef"><b>Definition</b> Window.cpp:30</div></div>
+<div class="ttc" id="aclass_window_html_aa5e409ecd45b4430ed72f4872a8f667f"><div class="ttname"><a href="class_window.html#aa5e409ecd45b4430ed72f4872a8f667f">Window::pollEvents</a></div><div class="ttdeci">void pollEvents()</div><div class="ttdoc">Polls window events.</div><div class="ttdef"><b>Definition</b> Window.cpp:39</div></div>
+<div class="ttc" id="aclass_window_html_ae779be3a5327f62c5e86a3e3d8a37289"><div class="ttname"><a href="class_window.html#ae779be3a5327f62c5e86a3e3d8a37289">Window::shouldClose</a></div><div class="ttdeci">bool shouldClose()</div><div class="ttdoc">Checks whether the window should close.</div><div class="ttdef"><b>Definition</b> Window.cpp:35</div></div>
+<div class="ttc" id="aclass_window_html_ae89eca69609390f224bdd9e37cb91b2c"><div class="ttname"><a href="class_window.html#ae89eca69609390f224bdd9e37cb91b2c">Window::Window</a></div><div class="ttdeci">Window(int width, int height, const char *title)</div><div class="ttdoc">Constructs a window with the given size and title.</div><div class="ttdef"><b>Definition</b> Window.cpp:5</div></div>
+<div class="ttc" id="aclass_window_html_af6ffedb8d12d5551bdb4c298de87ed56"><div class="ttname"><a href="class_window.html#af6ffedb8d12d5551bdb4c298de87ed56">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers()</div><div class="ttdoc">Swaps the front and back buffers.</div><div class="ttdef"><b>Definition</b> Window.cpp:43</div></div>
+<div class="ttc" id="aclass_window_html_aff1c6d46dc964b39ac6a54a735330d13"><div class="ttname"><a href="class_window.html#aff1c6d46dc964b39ac6a54a735330d13">Window::getNativeWindow</a></div><div class="ttdeci">GLFWwindow * getNativeWindow()</div><div class="ttdoc">Retrieves the underlying GLFW window pointer.</div><div class="ttdef"><b>Definition</b> Window.cpp:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

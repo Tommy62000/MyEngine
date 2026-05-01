@@ -1,17 +1,83 @@
 \doxysection{Engine Class Reference}
 \hypertarget{class_engine}{}\label{class_engine}\index{Engine@{Engine}}
+
+
+Global engine utility class.  
+
+
+
+
+{\ttfamily \+\#include $<$Engine.\+h$>$}
+
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_engine_a611b73786867f92149f8f69cae60b76a}\label{class_engine_a611b73786867f92149f8f69cae60b76a} 
-static void {\bfseries init} (const std::\+string \&project\+Root)
-\item 
-\Hypertarget{class_engine_afdfd1b37e6d4d072f2b0bc02f29b6186}\label{class_engine_afdfd1b37e6d4d072f2b0bc02f29b6186} 
-static const std::\+string \& {\bfseries root} ()
-\item 
-\Hypertarget{class_engine_adebbee1ddcbbbd467819030ed200763b}\label{class_engine_adebbee1ddcbbbd467819030ed200763b} 
-static std::\+string {\bfseries asset\+Path} (const std::\+string \&relative\+Path)
-\end{DoxyCompactItemize}
+static void \doxymbox{\hyperlink{class_engine_a611b73786867f92149f8f69cae60b76a}{init}} (const std::\+string \&project\+Root)
+\begin{DoxyCompactList}\small\item\em Initializes the engine with the project root directory. \end{DoxyCompactList}\item 
+static const std::\+string \& \doxymbox{\hyperlink{class_engine_afdfd1b37e6d4d072f2b0bc02f29b6186}{root}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the engine root directory. \end{DoxyCompactList}\item 
+static std::\+string \doxymbox{\hyperlink{class_engine_adebbee1ddcbbbd467819030ed200763b}{asset\+Path}} (const std::\+string \&relative\+Path)
+\begin{DoxyCompactList}\small\item\em Builds an absolute path to an asset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Global engine utility class. 
+
+The \doxylink{class_engine}{Engine} class provides access to engine-\/wide configuration and utility functions such as project root handling and asset path resolution. It is designed as a static-\/only class. 
+
+\label{doc-func-members}
+\Hypertarget{class_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_adebbee1ddcbbbd467819030ed200763b}\index{Engine@{Engine}!assetPath@{assetPath}}
+\index{assetPath@{assetPath}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{assetPath()}{assetPath()}}
+{\footnotesize\ttfamily \label{class_engine_adebbee1ddcbbbd467819030ed200763b} 
+std::\+string Engine::\+asset\+Path (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{relative\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Builds an absolute path to an asset. 
+
+Concatenates the engine root path with a relative asset path.
+
+
+\begin{DoxyParams}{Parameters}
+{\em relative\+Path} & Path relative to the project root. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Full resolved path to the asset. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_a611b73786867f92149f8f69cae60b76a}\index{Engine@{Engine}!init@{init}}
+\index{init@{init}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_engine_a611b73786867f92149f8f69cae60b76a} 
+void Engine::\+init (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{project\+Root}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initializes the engine with the project root directory. 
+
+This function must be called before using any other \doxylink{class_engine}{Engine} functionality.
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\+Root} & Absolute or relative path to the root of the project. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_afdfd1b37e6d4d072f2b0bc02f29b6186}\index{Engine@{Engine}!root@{root}}
+\index{root@{root}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{root()}{root()}}
+{\footnotesize\ttfamily \label{class_engine_afdfd1b37e6d4d072f2b0bc02f29b6186} 
+const std::\+string \& Engine::\+root (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the engine root directory. 
+
+\begin{DoxyReturn}{Returns}
+Constant reference to the stored root path. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}

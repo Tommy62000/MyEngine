@@ -6,7 +6,7 @@ var annotated_dup =
     [ "Logger", "class_logger.html", null ],
     [ "Mesh", "class_mesh.html", "class_mesh" ],
     [ "Renderer", "class_renderer.html", "class_renderer" ],
-    [ "Scene", "class_scene.html", null ],
-    [ "Shader", "class_shader.html", null ],
-    [ "Window", "class_window.html", null ]
+    [ "Scene", "class_scene.html", "class_scene" ],
+    [ "Shader", "class_shader.html", "class_shader" ],
+    [ "Window", "class_window.html", "class_window" ]
 ];

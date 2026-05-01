@@ -1,26 +1,128 @@
 \doxysection{Logger Class Reference}
 \hypertarget{class_logger}{}\label{class_logger}\index{Logger@{Logger}}
+
+
+Static logging utility class.  
+
+
+
+
+{\ttfamily \+\#include $<$Logger.\+h$>$}
+
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_logger_a42c282f4c0e2c6557d16e2967c1ddf7e}\label{class_logger_a42c282f4c0e2c6557d16e2967c1ddf7e} 
-static void {\bfseries Init} ()
-\item 
-\Hypertarget{class_logger_a6acf20a6a55aa2234f75a80595c7c264}\label{class_logger_a6acf20a6a55aa2234f75a80595c7c264} 
-static void {\bfseries Log} (Log\+Level level, const std::\+string \&message)
-\item 
-\Hypertarget{class_logger_ac699dc1c5492b91d56217661cd4284c5}\label{class_logger_ac699dc1c5492b91d56217661cd4284c5} 
-static void {\bfseries Info} (const std::\+string \&message)
-\item 
-\Hypertarget{class_logger_aaa7d1dece152ad75f38f036c1aa5a5f0}\label{class_logger_aaa7d1dece152ad75f38f036c1aa5a5f0} 
-static void {\bfseries Warning} (const std::\+string \&message)
-\item 
-\Hypertarget{class_logger_ac7d37ae671341cd39c80d4e4fbe0860b}\label{class_logger_ac7d37ae671341cd39c80d4e4fbe0860b} 
-static void {\bfseries Error} (const std::\+string \&message)
-\item 
-\Hypertarget{class_logger_aae22bdb872c0e75f911ad0021a728b0d}\label{class_logger_aae22bdb872c0e75f911ad0021a728b0d} 
-static void {\bfseries Debug} (const std::\+string \&message)
-\end{DoxyCompactItemize}
+static void \doxymbox{\hyperlink{class_logger_a42c282f4c0e2c6557d16e2967c1ddf7e}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the logging system. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_logger_a6acf20a6a55aa2234f75a80595c7c264}{Log}} (Log\+Level level, const std::\+string \&message)
+\begin{DoxyCompactList}\small\item\em Logs a message with a specified severity level. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_logger_ac699dc1c5492b91d56217661cd4284c5}{Info}} (const std::\+string \&message)
+\begin{DoxyCompactList}\small\item\em Logs an informational message. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_logger_aaa7d1dece152ad75f38f036c1aa5a5f0}{Warning}} (const std::\+string \&message)
+\begin{DoxyCompactList}\small\item\em Logs a warning message. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_logger_ac7d37ae671341cd39c80d4e4fbe0860b}{Error}} (const std::\+string \&message)
+\begin{DoxyCompactList}\small\item\em Logs an error message. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_logger_aae22bdb872c0e75f911ad0021a728b0d}{Debug}} (const std::\+string \&message)
+\begin{DoxyCompactList}\small\item\em Logs a debug message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static logging utility class. 
+
+\doxylink{class_logger}{Logger} provides a simple interface for logging messages with different severity levels. It is designed as a fully static utility and does not require instantiation. 
+
+\label{doc-func-members}
+\Hypertarget{class_logger_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_logger_aae22bdb872c0e75f911ad0021a728b0d}\index{Logger@{Logger}!Debug@{Debug}}
+\index{Debug@{Debug}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Debug()}{Debug()}}
+{\footnotesize\ttfamily \label{class_logger_aae22bdb872c0e75f911ad0021a728b0d} 
+void Logger::\+\+Debug (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Logs a debug message. 
+
+Typically used for development and debugging purposes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to log. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_logger_ac7d37ae671341cd39c80d4e4fbe0860b}\index{Logger@{Logger}!Error@{Error}}
+\index{Error@{Error}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}}
+{\footnotesize\ttfamily \label{class_logger_ac7d37ae671341cd39c80d4e4fbe0860b} 
+void Logger::\+\+Error (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Logs an error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to log. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_logger_ac699dc1c5492b91d56217661cd4284c5}\index{Logger@{Logger}!Info@{Info}}
+\index{Info@{Info}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Info()}{Info()}}
+{\footnotesize\ttfamily \label{class_logger_ac699dc1c5492b91d56217661cd4284c5} 
+void Logger::\+\+Info (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Logs an informational message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to log. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_logger_a42c282f4c0e2c6557d16e2967c1ddf7e}\index{Logger@{Logger}!Init@{Init}}
+\index{Init@{Init}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_logger_a42c282f4c0e2c6557d16e2967c1ddf7e} 
+void Logger::\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initializes the logging system. 
+
+This function should be called once before using any logging functions. It can be used to configure output destinations, formats, or sinks. \Hypertarget{class_logger_a6acf20a6a55aa2234f75a80595c7c264}\index{Logger@{Logger}!Log@{Log}}
+\index{Log@{Log}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily \label{class_logger_a6acf20a6a55aa2234f75a80595c7c264} 
+void Logger::\+\+Log (\begin{DoxyParamCaption}\item[{Log\+Level}]{level}{, }\item[{const std::\+string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Logs a message with a specified severity level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Severity level of the log message. \\
+\hline
+{\em message} & Text message to log. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_logger_aaa7d1dece152ad75f38f036c1aa5a5f0}\index{Logger@{Logger}!Warning@{Warning}}
+\index{Warning@{Warning}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Warning()}{Warning()}}
+{\footnotesize\ttfamily \label{class_logger_aaa7d1dece152ad75f38f036c1aa5a5f0} 
+void Logger::\+\+Warning (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Logs a warning message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to log. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}

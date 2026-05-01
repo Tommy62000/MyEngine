@@ -91,12 +91,56 @@ $(function(){initNavTree('class_asset_manager.html','','class_asset_manager-memb
   <div class="headertitle"><div class="title">AssetManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Utility class for resolving asset paths.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_asset_manager_8h_source.html">AssetManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae32ffebefe3a8520af22558df0469a58" id="r_ae32ffebefe3a8520af22558df0469a58"><td class="memItemLeft"><a id="ae32ffebefe3a8520af22558df0469a58" name="ae32ffebefe3a8520af22558df0469a58"></a>
-static std::string&#160;</td><td class="memItemRight"><b>shader</b> (const std::string &amp;file)</td></tr>
+<tr class="memitem:ae32ffebefe3a8520af22558df0469a58" id="r_ae32ffebefe3a8520af22558df0469a58"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#ae32ffebefe3a8520af22558df0469a58">shader</a> (const std::string &amp;file)</td></tr>
+<tr class="memdesc:ae32ffebefe3a8520af22558df0469a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the full path to a shader file.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Utility class for resolving asset paths. </p>
+<p><a class="el" href="class_asset_manager.html" title="Utility class for resolving asset paths.">AssetManager</a> provides helper functions to construct paths to engine resources such as shaders, textures, and other assets. It is designed as a static-only utility class. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ae32ffebefe3a8520af22558df0469a58" name="ae32ffebefe3a8520af22558df0469a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32ffebefe3a8520af22558df0469a58">&#9670;&#160;</a></span>shader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string AssetManager::shader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the full path to a shader file. </p>
+<p>Constructs a valid path to a shader resource based on the engine's asset directory structure.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Name of the shader file (relative path or filename). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Full resolved path to the shader file. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/engine/<a class="el" href="_asset_manager_8h_source.html">AssetManager.h</a></li>
 <li>src/core/engine/<b>AssetManager.cpp</b></li>

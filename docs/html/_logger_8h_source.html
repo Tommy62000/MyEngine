@@ -93,25 +93,34 @@ $(function(){initNavTree('_logger_8h_source.html','',''); });
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Log.h&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_logger.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="class_logger.html">Logger</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> Init();</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> Log(LogLevel level, <span class="keyword">const</span> std::string&amp; message);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> Info(<span class="keyword">const</span> std::string&amp; message);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> Warning(<span class="keyword">const</span> std::string&amp; message);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> Error(<span class="keyword">const</span> std::string&amp; message);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> Debug(<span class="keyword">const</span> std::string&amp; message);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> std::string LevelToString(LogLevel level);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_logger.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_logger.html">Logger</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_logger.html#a42c282f4c0e2c6557d16e2967c1ddf7e">Init</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_logger.html#a6acf20a6a55aa2234f75a80595c7c264">Log</a>(LogLevel level, <span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_logger.html#ac699dc1c5492b91d56217661cd4284c5">Info</a>(<span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_logger.html#aaa7d1dece152ad75f38f036c1aa5a5f0">Warning</a>(<span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_logger.html#ac7d37ae671341cd39c80d4e4fbe0860b">Error</a>(<span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_logger.html#aae22bdb872c0e75f911ad0021a728b0d">Debug</a>(<span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">static</span> std::string LevelToString(LogLevel level);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
 </div>
-<div class="ttc" id="aclass_logger_html"><div class="ttname"><a href="class_logger.html">Logger</a></div><div class="ttdef"><b>Definition</b> Logger.h:5</div></div>
+<div class="ttc" id="aclass_logger_html"><div class="ttname"><a href="class_logger.html">Logger</a></div><div class="ttdoc">Static logging utility class.</div><div class="ttdef"><b>Definition</b> Logger.h:12</div></div>
+<div class="ttc" id="aclass_logger_html_a42c282f4c0e2c6557d16e2967c1ddf7e"><div class="ttname"><a href="class_logger.html#a42c282f4c0e2c6557d16e2967c1ddf7e">Logger::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdoc">Initializes the logging system.</div><div class="ttdef"><b>Definition</b> Logger.cpp:5</div></div>
+<div class="ttc" id="aclass_logger_html_a6acf20a6a55aa2234f75a80595c7c264"><div class="ttname"><a href="class_logger.html#a6acf20a6a55aa2234f75a80595c7c264">Logger::Log</a></div><div class="ttdeci">static void Log(LogLevel level, const std::string &amp;message)</div><div class="ttdoc">Logs a message with a specified severity level.</div><div class="ttdef"><b>Definition</b> Logger.cpp:10</div></div>
+<div class="ttc" id="aclass_logger_html_aaa7d1dece152ad75f38f036c1aa5a5f0"><div class="ttname"><a href="class_logger.html#aaa7d1dece152ad75f38f036c1aa5a5f0">Logger::Warning</a></div><div class="ttdeci">static void Warning(const std::string &amp;message)</div><div class="ttdoc">Logs a warning message.</div><div class="ttdef"><b>Definition</b> Logger.cpp:20</div></div>
+<div class="ttc" id="aclass_logger_html_aae22bdb872c0e75f911ad0021a728b0d"><div class="ttname"><a href="class_logger.html#aae22bdb872c0e75f911ad0021a728b0d">Logger::Debug</a></div><div class="ttdeci">static void Debug(const std::string &amp;message)</div><div class="ttdoc">Logs a debug message.</div><div class="ttdef"><b>Definition</b> Logger.cpp:30</div></div>
+<div class="ttc" id="aclass_logger_html_ac699dc1c5492b91d56217661cd4284c5"><div class="ttname"><a href="class_logger.html#ac699dc1c5492b91d56217661cd4284c5">Logger::Info</a></div><div class="ttdeci">static void Info(const std::string &amp;message)</div><div class="ttdoc">Logs an informational message.</div><div class="ttdef"><b>Definition</b> Logger.cpp:15</div></div>
+<div class="ttc" id="aclass_logger_html_ac7d37ae671341cd39c80d4e4fbe0860b"><div class="ttname"><a href="class_logger.html#ac7d37ae671341cd39c80d4e4fbe0860b">Logger::Error</a></div><div class="ttdeci">static void Error(const std::string &amp;message)</div><div class="ttdoc">Logs an error message.</div><div class="ttdef"><b>Definition</b> Logger.cpp:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -91,22 +91,230 @@ $(function(){initNavTree('class_logger.html','','class_logger-members'); });
   <div class="headertitle"><div class="title">Logger Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Static logging utility class.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_logger_8h_source.html">Logger.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a42c282f4c0e2c6557d16e2967c1ddf7e" id="r_a42c282f4c0e2c6557d16e2967c1ddf7e"><td class="memItemLeft"><a id="a42c282f4c0e2c6557d16e2967c1ddf7e" name="a42c282f4c0e2c6557d16e2967c1ddf7e"></a>
-static void&#160;</td><td class="memItemRight"><b>Init</b> ()</td></tr>
-<tr class="memitem:a6acf20a6a55aa2234f75a80595c7c264" id="r_a6acf20a6a55aa2234f75a80595c7c264"><td class="memItemLeft"><a id="a6acf20a6a55aa2234f75a80595c7c264" name="a6acf20a6a55aa2234f75a80595c7c264"></a>
-static void&#160;</td><td class="memItemRight"><b>Log</b> (LogLevel level, const std::string &amp;message)</td></tr>
-<tr class="memitem:ac699dc1c5492b91d56217661cd4284c5" id="r_ac699dc1c5492b91d56217661cd4284c5"><td class="memItemLeft"><a id="ac699dc1c5492b91d56217661cd4284c5" name="ac699dc1c5492b91d56217661cd4284c5"></a>
-static void&#160;</td><td class="memItemRight"><b>Info</b> (const std::string &amp;message)</td></tr>
-<tr class="memitem:aaa7d1dece152ad75f38f036c1aa5a5f0" id="r_aaa7d1dece152ad75f38f036c1aa5a5f0"><td class="memItemLeft"><a id="aaa7d1dece152ad75f38f036c1aa5a5f0" name="aaa7d1dece152ad75f38f036c1aa5a5f0"></a>
-static void&#160;</td><td class="memItemRight"><b>Warning</b> (const std::string &amp;message)</td></tr>
-<tr class="memitem:ac7d37ae671341cd39c80d4e4fbe0860b" id="r_ac7d37ae671341cd39c80d4e4fbe0860b"><td class="memItemLeft"><a id="ac7d37ae671341cd39c80d4e4fbe0860b" name="ac7d37ae671341cd39c80d4e4fbe0860b"></a>
-static void&#160;</td><td class="memItemRight"><b>Error</b> (const std::string &amp;message)</td></tr>
-<tr class="memitem:aae22bdb872c0e75f911ad0021a728b0d" id="r_aae22bdb872c0e75f911ad0021a728b0d"><td class="memItemLeft"><a id="aae22bdb872c0e75f911ad0021a728b0d" name="aae22bdb872c0e75f911ad0021a728b0d"></a>
-static void&#160;</td><td class="memItemRight"><b>Debug</b> (const std::string &amp;message)</td></tr>
+<tr class="memitem:a42c282f4c0e2c6557d16e2967c1ddf7e" id="r_a42c282f4c0e2c6557d16e2967c1ddf7e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a42c282f4c0e2c6557d16e2967c1ddf7e">Init</a> ()</td></tr>
+<tr class="memdesc:a42c282f4c0e2c6557d16e2967c1ddf7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the logging system.  <br /></td></tr>
+<tr class="memitem:a6acf20a6a55aa2234f75a80595c7c264" id="r_a6acf20a6a55aa2234f75a80595c7c264"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a6acf20a6a55aa2234f75a80595c7c264">Log</a> (LogLevel level, const std::string &amp;message)</td></tr>
+<tr class="memdesc:a6acf20a6a55aa2234f75a80595c7c264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with a specified severity level.  <br /></td></tr>
+<tr class="memitem:ac699dc1c5492b91d56217661cd4284c5" id="r_ac699dc1c5492b91d56217661cd4284c5"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac699dc1c5492b91d56217661cd4284c5">Info</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:ac699dc1c5492b91d56217661cd4284c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an informational message.  <br /></td></tr>
+<tr class="memitem:aaa7d1dece152ad75f38f036c1aa5a5f0" id="r_aaa7d1dece152ad75f38f036c1aa5a5f0"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aaa7d1dece152ad75f38f036c1aa5a5f0">Warning</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:aaa7d1dece152ad75f38f036c1aa5a5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a warning message.  <br /></td></tr>
+<tr class="memitem:ac7d37ae671341cd39c80d4e4fbe0860b" id="r_ac7d37ae671341cd39c80d4e4fbe0860b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac7d37ae671341cd39c80d4e4fbe0860b">Error</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:ac7d37ae671341cd39c80d4e4fbe0860b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an error message.  <br /></td></tr>
+<tr class="memitem:aae22bdb872c0e75f911ad0021a728b0d" id="r_aae22bdb872c0e75f911ad0021a728b0d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aae22bdb872c0e75f911ad0021a728b0d">Debug</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:aae22bdb872c0e75f911ad0021a728b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a debug message.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Static logging utility class. </p>
+<p><a class="el" href="class_logger.html" title="Static logging utility class.">Logger</a> provides a simple interface for logging messages with different severity levels. It is designed as a fully static utility and does not require instantiation. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aae22bdb872c0e75f911ad0021a728b0d" name="aae22bdb872c0e75f911ad0021a728b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae22bdb872c0e75f911ad0021a728b0d">&#9670;&#160;</a></span>Debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::Debug </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a debug message. </p>
+<p>Typically used for development and debugging purposes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Message to log. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac7d37ae671341cd39c80d4e4fbe0860b" name="ac7d37ae671341cd39c80d4e4fbe0860b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d37ae671341cd39c80d4e4fbe0860b">&#9670;&#160;</a></span>Error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::Error </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs an error message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Message to log. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac699dc1c5492b91d56217661cd4284c5" name="ac699dc1c5492b91d56217661cd4284c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac699dc1c5492b91d56217661cd4284c5">&#9670;&#160;</a></span>Info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::Info </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs an informational message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Message to log. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a42c282f4c0e2c6557d16e2967c1ddf7e" name="a42c282f4c0e2c6557d16e2967c1ddf7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c282f4c0e2c6557d16e2967c1ddf7e">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::Init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the logging system. </p>
+<p>This function should be called once before using any logging functions. It can be used to configure output destinations, formats, or sinks. </p>
+
+</div>
+</div>
+<a id="a6acf20a6a55aa2234f75a80595c7c264" name="a6acf20a6a55aa2234f75a80595c7c264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6acf20a6a55aa2234f75a80595c7c264">&#9670;&#160;</a></span>Log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::Log </td>
+          <td>(</td>
+          <td class="paramtype">LogLevel</td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with a specified severity level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>Severity level of the log message. </td></tr>
+    <tr><td class="paramname">message</td><td>Text message to log. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaa7d1dece152ad75f38f036c1aa5a5f0" name="aaa7d1dece152ad75f38f036c1aa5a5f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa7d1dece152ad75f38f036c1aa5a5f0">&#9670;&#160;</a></span>Warning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::Warning </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a warning message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Message to log. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/log/<a class="el" href="_logger_8h_source.html">Logger.h</a></li>
 <li>src/core/log/<b>Logger.cpp</b></li>

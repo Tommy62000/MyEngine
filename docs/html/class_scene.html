@@ -91,14 +91,72 @@ $(function(){initNavTree('class_scene.html','','class_scene-members'); });
   <div class="headertitle"><div class="title">Scene Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a collection of renderable meshes.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_scene_8h_source.html">Scene.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a409275c22f5d3cc3544d8689fa189866" id="r_a409275c22f5d3cc3544d8689fa189866"><td class="memItemLeft"><a id="a409275c22f5d3cc3544d8689fa189866" name="a409275c22f5d3cc3544d8689fa189866"></a>
-void&#160;</td><td class="memItemRight"><b>addMesh</b> (std::unique_ptr&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt; mesh)</td></tr>
-<tr class="memitem:aaed9de9c90065a628e59748b59d32f4f" id="r_aaed9de9c90065a628e59748b59d32f4f"><td class="memItemLeft"><a id="aaed9de9c90065a628e59748b59d32f4f" name="aaed9de9c90065a628e59748b59d32f4f"></a>
-const std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><b>getMeshes</b> () const</td></tr>
+<tr class="memitem:a409275c22f5d3cc3544d8689fa189866" id="r_a409275c22f5d3cc3544d8689fa189866"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a409275c22f5d3cc3544d8689fa189866">addMesh</a> (std::unique_ptr&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt; mesh)</td></tr>
+<tr class="memdesc:a409275c22f5d3cc3544d8689fa189866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a mesh to the scene.  <br /></td></tr>
+<tr class="memitem:aaed9de9c90065a628e59748b59d32f4f" id="r_aaed9de9c90065a628e59748b59d32f4f"><td class="memItemLeft">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aaed9de9c90065a628e59748b59d32f4f">getMeshes</a> () const</td></tr>
+<tr class="memdesc:aaed9de9c90065a628e59748b59d32f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all meshes in the scene.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a collection of renderable meshes. </p>
+<p>The <a class="el" href="class_scene.html" title="Represents a collection of renderable meshes.">Scene</a> class owns and manages a set of <a class="el" href="class_mesh.html" title="Represents a renderable 3D mesh stored on the GPU.">Mesh</a> objects. Ownership is exclusive and handled via std::unique_ptr. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a409275c22f5d3cc3544d8689fa189866" name="a409275c22f5d3cc3544d8689fa189866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409275c22f5d3cc3544d8689fa189866">&#9670;&#160;</a></span>addMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::addMesh </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a mesh to the scene. </p>
+<p>Transfers ownership of the given mesh to the <a class="el" href="class_scene.html" title="Represents a collection of renderable meshes.">Scene</a>. After the call, the caller no longer owns the mesh.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>Unique pointer to the <a class="el" href="class_mesh.html" title="Represents a renderable 3D mesh stored on the GPU.">Mesh</a> to add. Must be passed with std::move.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The input pointer becomes null after the call. </dd></dl>
+
+</div>
+</div>
+<a id="aaed9de9c90065a628e59748b59d32f4f" name="aaed9de9c90065a628e59748b59d32f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed9de9c90065a628e59748b59d32f4f">&#9670;&#160;</a></span>getMeshes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt; &gt; &amp; Scene::getMeshes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves all meshes in the scene. </p>
+<p>Provides read-only access to the internal container. The structure of the container cannot be modified, but the <a class="el" href="class_mesh.html" title="Represents a renderable 3D mesh stored on the GPU.">Mesh</a> objects themselves may still be mutable.</p>
+<dl class="section return"><dt>Returns</dt><dd>Constant reference to the vector of meshes.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Modifying the returned <a class="el" href="class_mesh.html" title="Represents a renderable 3D mesh stored on the GPU.">Mesh</a> objects may affect the <a class="el" href="class_scene.html" title="Represents a collection of renderable meshes.">Scene</a> state. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/<a class="el" href="_scene_8h_source.html">Scene.h</a></li>
 <li>src/core/<b>Scene.cpp</b></li>

@@ -91,21 +91,130 @@ $(function(){initNavTree('class_shader.html','','class_shader-members'); });
   <div class="headertitle"><div class="title">Shader Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Encapsulates an OpenGL shader program.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_shader_8h_source.html">Shader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad80a9756b7d9a62adea45fcd82a06f4c" id="r_ad80a9756b7d9a62adea45fcd82a06f4c"><td class="memItemLeft"><a id="ad80a9756b7d9a62adea45fcd82a06f4c" name="ad80a9756b7d9a62adea45fcd82a06f4c"></a>
-&#160;</td><td class="memItemRight"><b>Shader</b> (const std::string &amp;vertexPath, const std::string &amp;fragmentPath)</td></tr>
-<tr class="memitem:a870fa9f13d69e558815d6fd351a469dc" id="r_a870fa9f13d69e558815d6fd351a469dc"><td class="memItemLeft"><a id="a870fa9f13d69e558815d6fd351a469dc" name="a870fa9f13d69e558815d6fd351a469dc"></a>
-void&#160;</td><td class="memItemRight"><b>use</b> ()</td></tr>
-<tr class="memitem:a8e711c96f3e1722cbfb88fde9478977c" id="r_a8e711c96f3e1722cbfb88fde9478977c"><td class="memItemLeft"><a id="a8e711c96f3e1722cbfb88fde9478977c" name="a8e711c96f3e1722cbfb88fde9478977c"></a>
-void&#160;</td><td class="memItemRight"><b>setMat4</b> (const std::string &amp;name, const glm::mat4 &amp;mat) const</td></tr>
+<tr class="memitem:ad80a9756b7d9a62adea45fcd82a06f4c" id="r_ad80a9756b7d9a62adea45fcd82a06f4c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad80a9756b7d9a62adea45fcd82a06f4c">Shader</a> (const std::string &amp;vertexPath, const std::string &amp;fragmentPath)</td></tr>
+<tr class="memdesc:ad80a9756b7d9a62adea45fcd82a06f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a shader program from vertex and fragment shader files.  <br /></td></tr>
+<tr class="memitem:a870fa9f13d69e558815d6fd351a469dc" id="r_a870fa9f13d69e558815d6fd351a469dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a870fa9f13d69e558815d6fd351a469dc">use</a> ()</td></tr>
+<tr class="memdesc:a870fa9f13d69e558815d6fd351a469dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates the shader program.  <br /></td></tr>
+<tr class="memitem:a8e711c96f3e1722cbfb88fde9478977c" id="r_a8e711c96f3e1722cbfb88fde9478977c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8e711c96f3e1722cbfb88fde9478977c">setMat4</a> (const std::string &amp;name, const glm::mat4 &amp;mat) const</td></tr>
+<tr class="memdesc:a8e711c96f3e1722cbfb88fde9478977c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a 4x4 matrix uniform in the shader.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a142a08b6fbdfc982d82ca10ee0b0f38d" id="r_a142a08b6fbdfc982d82ca10ee0b0f38d"><td class="memItemLeft"><a id="a142a08b6fbdfc982d82ca10ee0b0f38d" name="a142a08b6fbdfc982d82ca10ee0b0f38d"></a>
-unsigned int&#160;</td><td class="memItemRight"><b>ID</b></td></tr>
+<tr class="memitem:a142a08b6fbdfc982d82ca10ee0b0f38d" id="r_a142a08b6fbdfc982d82ca10ee0b0f38d"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a142a08b6fbdfc982d82ca10ee0b0f38d">ID</a></td></tr>
+<tr class="memdesc:a142a08b6fbdfc982d82ca10ee0b0f38d"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenGL program ID.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Encapsulates an OpenGL shader program. </p>
+<p>The <a class="el" href="class_shader.html" title="Encapsulates an OpenGL shader program.">Shader</a> class handles loading, compiling, and linking vertex and fragment shaders into a single GPU program. It also provides utility functions for setting uniform values. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad80a9756b7d9a62adea45fcd82a06f4c" name="ad80a9756b7d9a62adea45fcd82a06f4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad80a9756b7d9a62adea45fcd82a06f4c">&#9670;&#160;</a></span>Shader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shader::Shader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vertexPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fragmentPath</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a shader program from vertex and fragment shader files. </p>
+<p>Loads shader source code from the provided file paths, compiles them, and links them into a single OpenGL shader program.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexPath</td><td>Path to the vertex shader source file. </td></tr>
+    <tr><td class="paramname">fragmentPath</td><td>Path to the fragment shader source file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8e711c96f3e1722cbfb88fde9478977c" name="a8e711c96f3e1722cbfb88fde9478977c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e711c96f3e1722cbfb88fde9478977c">&#9670;&#160;</a></span>setMat4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::setMat4 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a 4x4 matrix uniform in the shader. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the uniform variable in the shader. </td></tr>
+    <tr><td class="paramname">mat</td><td>4x4 matrix value to upload. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a870fa9f13d69e558815d6fd351a469dc" name="a870fa9f13d69e558815d6fd351a469dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a870fa9f13d69e558815d6fd351a469dc">&#9670;&#160;</a></span>use()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::use </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Activates the shader program. </p>
+<p>Makes this shader the current active program for rendering. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a142a08b6fbdfc982d82ca10ee0b0f38d" name="a142a08b6fbdfc982d82ca10ee0b0f38d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a142a08b6fbdfc982d82ca10ee0b0f38d">&#9670;&#160;</a></span>ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Shader::ID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OpenGL program ID. </p>
+<p>This is the identifier of the compiled and linked shader program used internally by OpenGL. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/renderer/<a class="el" href="_shader_8h_source.html">Shader.h</a></li>
 <li>src/renderer/<b>Shader.cpp</b></li>
