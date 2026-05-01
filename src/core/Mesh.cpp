@@ -29,14 +29,23 @@ Mesh::Mesh(const std::vector<float>& vertices, const std::vector<unsigned int>& 
         GL_STATIC_DRAW
     );
 
-    // layout (posizione vec3)
+    // layout (position vec3)
     glVertexAttribPointer(
         0, 3, GL_FLOAT, GL_FALSE,
-        3 * sizeof(float),
+        6 * sizeof(float),
         (void*)0
     );
 
     glEnableVertexAttribArray(0);
+
+    // layout (normals vec3)
+    glVertexAttribPointer(
+        1, 3, GL_FLOAT, GL_FALSE,
+        6 * sizeof(float),
+        (void*)(3 * sizeof(float))
+    );
+
+    glEnableVertexAttribArray(1);
 
     // cleanup state
     glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -50,6 +59,7 @@ Mesh::~Mesh() {
 
 void Mesh::draw() const {
     glBindVertexArray(VAO);
+    // Render the mesh using triangles as primitives
     glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
 }

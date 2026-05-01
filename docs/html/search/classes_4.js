@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mesh_0',['Mesh',['../class_mesh.html',1,'']]]
+  ['logger_0',['Logger',['../class_logger.html',1,'']]]
 ];

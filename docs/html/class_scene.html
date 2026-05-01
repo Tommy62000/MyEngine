@@ -103,11 +103,41 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a409275c22f5d3cc3544d8689fa189866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a mesh to the scene.  <br /></td></tr>
 <tr class="memitem:aaed9de9c90065a628e59748b59d32f4f" id="r_aaed9de9c90065a628e59748b59d32f4f"><td class="memItemLeft">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aaed9de9c90065a628e59748b59d32f4f">getMeshes</a> () const</td></tr>
 <tr class="memdesc:aaed9de9c90065a628e59748b59d32f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all meshes in the scene.  <br /></td></tr>
+<tr class="memitem:a774469d7cbb330c0ad7c97112ca8fcd7" id="r_a774469d7cbb330c0ad7c97112ca8fcd7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a774469d7cbb330c0ad7c97112ca8fcd7">addDirectionalLight</a> (const <a class="el" href="class_directional_light.html">DirectionalLight</a> &amp;light)</td></tr>
+<tr class="memdesc:a774469d7cbb330c0ad7c97112ca8fcd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a directional light to the scene.  <br /></td></tr>
+<tr class="memitem:abf2b97b9c9b9bc79199ceaa33915ad4a" id="r_abf2b97b9c9b9bc79199ceaa33915ad4a"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_directional_light.html">DirectionalLight</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#abf2b97b9c9b9bc79199ceaa33915ad4a">getDirectionalLights</a> () const</td></tr>
+<tr class="memdesc:abf2b97b9c9b9bc79199ceaa33915ad4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all directional lights in the scene.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a collection of renderable meshes. </p>
 <p>The <a class="el" href="class_scene.html" title="Represents a collection of renderable meshes.">Scene</a> class owns and manages a set of <a class="el" href="class_mesh.html" title="Represents a renderable 3D mesh stored on the GPU.">Mesh</a> objects. Ownership is exclusive and handled via std::unique_ptr. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a774469d7cbb330c0ad7c97112ca8fcd7" name="a774469d7cbb330c0ad7c97112ca8fcd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774469d7cbb330c0ad7c97112ca8fcd7">&#9670;&#160;</a></span>addDirectionalLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::addDirectionalLight </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_directional_light.html">DirectionalLight</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a directional light to the scene. </p>
+<p>The light is copied into the internal container and will be used during rendering for lighting calculations.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">light</td><td><a class="el" href="class_directional_light.html" title="Represents a directional light source.">DirectionalLight</a> instance to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a409275c22f5d3cc3544d8689fa189866" name="a409275c22f5d3cc3544d8689fa189866"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a409275c22f5d3cc3544d8689fa189866">&#9670;&#160;</a></span>addMesh()</h2>
 
@@ -132,6 +162,28 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The input pointer becomes null after the call. </dd></dl>
+
+</div>
+</div>
+<a id="abf2b97b9c9b9bc79199ceaa33915ad4a" name="abf2b97b9c9b9bc79199ceaa33915ad4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2b97b9c9b9bc79199ceaa33915ad4a">&#9670;&#160;</a></span>getDirectionalLights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="class_directional_light.html">DirectionalLight</a> &gt; &amp; Scene::getDirectionalLights </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves all directional lights in the scene. </p>
+<p>Provides read-only access to the internal list of directional lights.</p>
+<dl class="section return"><dt>Returns</dt><dd>Constant reference to a vector of <a class="el" href="class_directional_light.html" title="Represents a directional light source.">DirectionalLight</a> objects.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The returned reference does not allow modification of the container, but the Light objects themselves may still be mutable if not enforced otherwise. </dd></dl>
 
 </div>
 </div>

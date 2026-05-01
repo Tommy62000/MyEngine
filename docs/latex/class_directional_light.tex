@@ -1,0 +1,92 @@
+\doxysection{Directional\+Light Class Reference}
+\hypertarget{class_directional_light}{}\label{class_directional_light}\index{DirectionalLight@{DirectionalLight}}
+
+
+Represents a directional light source.  
+
+
+
+
+{\ttfamily \+\#include $<$Directional\+Light.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_directional_light_a04e6c3c20564d5f4ab60f927743de208}{Directional\+Light}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_directional_light_a0ee38a9f7aca775ffdc30314cf71e5c9}{Directional\+Light}} (const glm::\+vec3 \&dir, const glm::\+vec3 \&col)
+\begin{DoxyCompactList}\small\item\em Constructs a directional light with custom parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{class_directional_light_a5b2956fd8583e5ef45fbf1f1e778cd39}{direction}} \{ -\/0.\+3f, -\/1.\+0f, -\/0.\+2f \}
+\begin{DoxyCompactList}\small\item\em Direction of the light. \end{DoxyCompactList}\item 
+glm::\+vec3 \doxymbox{\hyperlink{class_directional_light_a04b262db309212dee8e3bbcdf32b28b2}{color}} \{ 1.\+0f, 1.\+0f, 1.\+0f \}
+\begin{DoxyCompactList}\small\item\em Color of the light. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a directional light source. 
+
+A directional light simulates a light source at an infinite distance, where all light rays are parallel. It is commonly used to represent sunlight or moonlight in a scene. 
+
+\label{doc-constructors}
+\Hypertarget{class_directional_light_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_directional_light_a04e6c3c20564d5f4ab60f927743de208}\index{DirectionalLight@{DirectionalLight}!DirectionalLight@{DirectionalLight}}
+\index{DirectionalLight@{DirectionalLight}!DirectionalLight@{DirectionalLight}}
+\doxysubsubsection{\texorpdfstring{DirectionalLight()}{DirectionalLight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_directional_light_a04e6c3c20564d5f4ab60f927743de208} 
+Directional\+Light::\+\+Directional\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+Initializes the light with default direction and white color. \Hypertarget{class_directional_light_a0ee38a9f7aca775ffdc30314cf71e5c9}\index{DirectionalLight@{DirectionalLight}!DirectionalLight@{DirectionalLight}}
+\index{DirectionalLight@{DirectionalLight}!DirectionalLight@{DirectionalLight}}
+\doxysubsubsection{\texorpdfstring{DirectionalLight()}{DirectionalLight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_directional_light_a0ee38a9f7aca775ffdc30314cf71e5c9} 
+Directional\+Light::\+\+Directional\+Light (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{dir}{, }\item[{const glm::\+vec3 \&}]{col}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a directional light with custom parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Direction of the light. \\
+\hline
+{\em col} & Color (intensity) of the light. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_directional_light_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_directional_light_a04b262db309212dee8e3bbcdf32b28b2}\index{DirectionalLight@{DirectionalLight}!color@{color}}
+\index{color@{color}!DirectionalLight@{DirectionalLight}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily \label{class_directional_light_a04b262db309212dee8e3bbcdf32b28b2} 
+glm::\+vec3 Directional\+Light::\+color \{ 1.\+0f, 1.\+0f, 1.\+0f \}}
+
+
+
+Color of the light. 
+
+Represents the RGB intensity of the light source. \Hypertarget{class_directional_light_a5b2956fd8583e5ef45fbf1f1e778cd39}\index{DirectionalLight@{DirectionalLight}!direction@{direction}}
+\index{direction@{direction}!DirectionalLight@{DirectionalLight}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \label{class_directional_light_a5b2956fd8583e5ef45fbf1f1e778cd39} 
+glm::\+vec3 Directional\+Light::\+direction \{ -\/0.\+3f, -\/1.\+0f, -\/0.\+2f \}}
+
+
+
+Direction of the light. 
+
+Defines the direction from which the light is coming. The vector should typically be normalized. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+core/\+Directional\+Light.\+h\end{DoxyCompactItemize}

@@ -24,18 +24,35 @@ void Renderer::draw(const Scene& scene, const Camera& camera) {
 
     // Obtain the camera matrix and the projection matrix
     glm::mat4 view = camera.getViewMatrix();
-
     glm::mat4 projection = camera.getProjectionMatrix();
 
     // Load the matrices in the shaders
     shader->setMat4("view", view);
     shader->setMat4("projection", projection);
 
+    // Load the lights from the scene in the shaders
+    const auto& lights = scene.getDirectionalLights();
+
+    if (!lights.empty()) {
+        // Right now only a single light
+        const auto& light = lights[0];
+
+        shader->setVec3("lightDir", light.direction);
+        shader->setVec3("lightColor", light.color);
+    }
+
+    // Load the meshes from the scene in the shaders
     for (const auto& mesh : scene.getMeshes()) {
         // Obtain model matrix
         glm::mat4 model = mesh->getModelMatrix();
+
         // Load the model matrix in the shaders
         shader->setMat4("model", model);
+
+        // Load the model colors in the shaders
+        shader->setVec3("objectColor", glm::vec3(1.0f, 0.0f, 0.0f));
+
+        // Render using shaders
         mesh->draw();
     }
 }

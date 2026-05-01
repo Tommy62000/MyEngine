@@ -47,6 +47,16 @@ public:
      */
     void setMat4(const std::string& name, const glm::mat4& mat) const;
     
+    /**
+     * @brief Sets a vec3 uniform in the shader.
+     *
+     * Updates the value of a vec3 uniform variable in the currently active
+     * shader program.
+     *
+     * @param name Name of the uniform variable in the GLSL shader.
+     * @param value glm::vec3 value to upload to the GPU.
+     */
+    void setVec3(const std::string& name, const glm::vec3& value) const;
 private:
     std::string loadFile(const std::string& path);
     unsigned int compile(unsigned int type, const std::string& source);

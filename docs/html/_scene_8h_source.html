@@ -96,21 +96,31 @@ $(function(){initNavTree('_scene_8h_source.html','',''); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Mesh.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_scene.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_scene.html">Scene</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a409275c22f5d3cc3544d8689fa189866">addMesh</a>(std::unique_ptr&lt;Mesh&gt; mesh);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">const</span> std::vector&lt;std::unique_ptr&lt;Mesh&gt;&gt;&amp; <a class="code hl_function" href="class_scene.html#aaed9de9c90065a628e59748b59d32f4f">getMeshes</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::vector&lt;std::unique_ptr&lt;Mesh&gt;&gt; meshes;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;DirectionalLight.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_scene.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_scene.html">Scene</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a409275c22f5d3cc3544d8689fa189866">addMesh</a>(std::unique_ptr&lt;Mesh&gt; mesh);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">const</span> std::vector&lt;std::unique_ptr&lt;Mesh&gt;&gt;&amp; <a class="code hl_function" href="class_scene.html#aaed9de9c90065a628e59748b59d32f4f">getMeshes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a774469d7cbb330c0ad7c97112ca8fcd7">addDirectionalLight</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_directional_light.html">DirectionalLight</a>&amp; light);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">const</span> std::vector&lt;DirectionalLight&gt;&amp; <a class="code hl_function" href="class_scene.html#abf2b97b9c9b9bc79199ceaa33915ad4a">getDirectionalLights</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::vector&lt;std::unique_ptr&lt;Mesh&gt;&gt; meshes;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::vector&lt;DirectionalLight&gt; directionalLights;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
 </div>
-<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdoc">Represents a collection of renderable meshes.</div><div class="ttdef"><b>Definition</b> Scene.h:13</div></div>
+<div class="ttc" id="aclass_directional_light_html"><div class="ttname"><a href="class_directional_light.html">DirectionalLight</a></div><div class="ttdoc">Represents a directional light source.</div><div class="ttdef"><b>Definition</b> DirectionalLight.h:12</div></div>
+<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdoc">Represents a collection of renderable meshes.</div><div class="ttdef"><b>Definition</b> Scene.h:15</div></div>
 <div class="ttc" id="aclass_scene_html_a409275c22f5d3cc3544d8689fa189866"><div class="ttname"><a href="class_scene.html#a409275c22f5d3cc3544d8689fa189866">Scene::addMesh</a></div><div class="ttdeci">void addMesh(std::unique_ptr&lt; Mesh &gt; mesh)</div><div class="ttdoc">Adds a mesh to the scene.</div><div class="ttdef"><b>Definition</b> Scene.cpp:3</div></div>
+<div class="ttc" id="aclass_scene_html_a774469d7cbb330c0ad7c97112ca8fcd7"><div class="ttname"><a href="class_scene.html#a774469d7cbb330c0ad7c97112ca8fcd7">Scene::addDirectionalLight</a></div><div class="ttdeci">void addDirectionalLight(const DirectionalLight &amp;light)</div><div class="ttdoc">Adds a directional light to the scene.</div><div class="ttdef"><b>Definition</b> Scene.cpp:11</div></div>
 <div class="ttc" id="aclass_scene_html_aaed9de9c90065a628e59748b59d32f4f"><div class="ttname"><a href="class_scene.html#aaed9de9c90065a628e59748b59d32f4f">Scene::getMeshes</a></div><div class="ttdeci">const std::vector&lt; std::unique_ptr&lt; Mesh &gt; &gt; &amp; getMeshes() const</div><div class="ttdoc">Retrieves all meshes in the scene.</div><div class="ttdef"><b>Definition</b> Scene.cpp:7</div></div>
+<div class="ttc" id="aclass_scene_html_abf2b97b9c9b9bc79199ceaa33915ad4a"><div class="ttname"><a href="class_scene.html#abf2b97b9c9b9bc79199ceaa33915ad4a">Scene::getDirectionalLights</a></div><div class="ttdeci">const std::vector&lt; DirectionalLight &gt; &amp; getDirectionalLights() const</div><div class="ttdoc">Retrieves all directional lights in the scene.</div><div class="ttdef"><b>Definition</b> Scene.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

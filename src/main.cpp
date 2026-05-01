@@ -26,27 +26,6 @@ int main() {
     renderer.init();
     Logger::Info("Renderer started");
 
-    // Create the Scene
-    Scene scene;
-
-    // Test triangle
-    std::vector<float> vertices = {
-        -0.5f, -0.5f, 0.0f,
-        0.5f, -0.5f, 0.0f,
-        0.0f,  0.5f, 0.0f
-    };
-
-    std::vector<unsigned int> indices = {
-        0, 1, 2
-    };
-
-    // Test triangle 2
-    std::vector<float> vertices2 = {
-        0.5f, 0.5f, -1.0f,
-        -0.5f, 0.5f, -1.0f,
-        0.0f,  -0.5f, -1.0f
-    };
-
     // Create the camera
     Camera camera;
 
@@ -55,6 +34,36 @@ int main() {
     glfwGetFramebufferSize(window.getNativeWindow(), &width, &height);
     camera.setAspectRatio((float) width / (float) height);
 
+    // Create the example scene
+    Scene scene;
+
+    scene.addDirectionalLight(
+        DirectionalLight(
+            glm::vec3(-0.3f, -1.0f, -0.2f),
+            glm::vec3(1.0f, 1.0f, 1.0f)
+        )
+    );
+
+    // Test triangle
+    std::vector<float> vertices = {
+        // position            // normal
+        -0.5f, -0.5f, 0.0f,    0.0f, 0.0f, 1.0f,
+        0.5f, -0.5f, 0.0f,    0.0f, 0.0f, 1.0f,
+        0.0f,  0.5f, 0.0f,    0.0f, 0.0f, 1.0f
+    };
+
+    std::vector<unsigned int> indices = {
+        0, 1, 2
+    };
+
+    // Test triangle 2
+    std::vector<float> vertices2 = {
+        // position             // normal
+        0.5f,  0.5f, -1.0f,    0.0f, 0.0f, -1.0f,
+        -0.5f,  0.5f, -1.0f,    0.0f, 0.0f, -1.0f,
+        0.0f, -0.5f, -1.0f,    0.0f, 0.0f, -1.0f
+    };
+    
     scene.addMesh(std::make_unique<Mesh>(vertices, indices));
     scene.addMesh(std::make_unique<Mesh>(vertices2, indices));
 

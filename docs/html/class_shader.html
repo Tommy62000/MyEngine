@@ -105,6 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a870fa9f13d69e558815d6fd351a469dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates the shader program.  <br /></td></tr>
 <tr class="memitem:a8e711c96f3e1722cbfb88fde9478977c" id="r_a8e711c96f3e1722cbfb88fde9478977c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8e711c96f3e1722cbfb88fde9478977c">setMat4</a> (const std::string &amp;name, const glm::mat4 &amp;mat) const</td></tr>
 <tr class="memdesc:a8e711c96f3e1722cbfb88fde9478977c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a 4x4 matrix uniform in the shader.  <br /></td></tr>
+<tr class="memitem:aeb021061c5d451329d92257b07dbfec3" id="r_aeb021061c5d451329d92257b07dbfec3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb021061c5d451329d92257b07dbfec3">setVec3</a> (const std::string &amp;name, const glm::vec3 &amp;value) const</td></tr>
+<tr class="memdesc:aeb021061c5d451329d92257b07dbfec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a vec3 uniform in the shader.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -171,6 +173,37 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">name</td><td>Name of the uniform variable in the shader. </td></tr>
     <tr><td class="paramname">mat</td><td>4x4 matrix value to upload. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb021061c5d451329d92257b07dbfec3" name="aeb021061c5d451329d92257b07dbfec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb021061c5d451329d92257b07dbfec3">&#9670;&#160;</a></span>setVec3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::setVec3 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a vec3 uniform in the shader. </p>
+<p>Updates the value of a vec3 uniform variable in the currently active shader program.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the uniform variable in the GLSL shader. </td></tr>
+    <tr><td class="paramname">value</td><td>glm::vec3 value to upload to the GPU. </td></tr>
   </table>
   </dd>
 </dl>

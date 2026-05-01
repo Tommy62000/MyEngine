@@ -3,6 +3,8 @@
 #include <vector>
 #include <memory>
 #include "Mesh.h"
+#include "DirectionalLight.h"
+
 
 /**
  * @brief Represents a collection of renderable meshes.
@@ -37,6 +39,29 @@ public:
      */
     const std::vector<std::unique_ptr<Mesh>>& getMeshes() const;
 
+    /**
+     * @brief Adds a directional light to the scene.
+     *
+     * The light is copied into the internal container and will be used
+     * during rendering for lighting calculations.
+     *
+     * @param light DirectionalLight instance to add.
+     */
+    void addDirectionalLight(const DirectionalLight& light);
+
+    /**
+     * @brief Retrieves all directional lights in the scene.
+     *
+     * Provides read-only access to the internal list of directional lights.
+     *
+     * @return Constant reference to a vector of DirectionalLight objects.
+     *
+     * @warning The returned reference does not allow modification of the container,
+     * but the Light objects themselves may still be mutable if not enforced otherwise.
+     */
+    const std::vector<DirectionalLight>& getDirectionalLights() const;
+
 private:
     std::vector<std::unique_ptr<Mesh>> meshes;
+    std::vector<DirectionalLight> directionalLights;
 };

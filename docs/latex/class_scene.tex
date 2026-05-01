@@ -15,7 +15,11 @@ Represents a collection of renderable meshes.
 void \doxymbox{\hyperlink{class_scene_a409275c22f5d3cc3544d8689fa189866}{add\+Mesh}} (std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_mesh}{Mesh}} $>$ mesh)
 \begin{DoxyCompactList}\small\item\em Adds a mesh to the scene. \end{DoxyCompactList}\item 
 const std::\+vector$<$ std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_mesh}{Mesh}} $>$ $>$ \& \doxymbox{\hyperlink{class_scene_aaed9de9c90065a628e59748b59d32f4f}{get\+Meshes}} () const
-\begin{DoxyCompactList}\small\item\em Retrieves all meshes in the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves all meshes in the scene. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_scene_a774469d7cbb330c0ad7c97112ca8fcd7}{add\+Directional\+Light}} (const \doxymbox{\hyperlink{class_directional_light}{Directional\+Light}} \&light)
+\begin{DoxyCompactList}\small\item\em Adds a directional light to the scene. \end{DoxyCompactList}\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_directional_light}{Directional\+Light}} $>$ \& \doxymbox{\hyperlink{class_scene_abf2b97b9c9b9bc79199ceaa33915ad4a}{get\+Directional\+Lights}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves all directional lights in the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -26,6 +30,23 @@ The \doxylink{class_scene}{Scene} class owns and manages a set of \doxylink{clas
 \label{doc-func-members}
 \Hypertarget{class_scene_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_scene_a774469d7cbb330c0ad7c97112ca8fcd7}\index{Scene@{Scene}!addDirectionalLight@{addDirectionalLight}}
+\index{addDirectionalLight@{addDirectionalLight}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{addDirectionalLight()}{addDirectionalLight()}}
+{\footnotesize\ttfamily \label{class_scene_a774469d7cbb330c0ad7c97112ca8fcd7} 
+void Scene::\+add\+Directional\+Light (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_directional_light}{Directional\+Light}} \&}]{light}{}\end{DoxyParamCaption})}
+
+
+
+Adds a directional light to the scene. 
+
+The light is copied into the internal container and will be used during rendering for lighting calculations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & \doxylink{class_directional_light}{Directional\+Light} instance to add. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_scene_a409275c22f5d3cc3544d8689fa189866}\index{Scene@{Scene}!addMesh@{addMesh}}
 \index{addMesh@{addMesh}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{addMesh()}{addMesh()}}
@@ -46,6 +67,24 @@ Transfers ownership of the given mesh to the \doxylink{class_scene}{Scene}. Afte
 \begin{DoxyNote}{Note}
 The input pointer becomes null after the call. 
 \end{DoxyNote}
+\Hypertarget{class_scene_abf2b97b9c9b9bc79199ceaa33915ad4a}\index{Scene@{Scene}!getDirectionalLights@{getDirectionalLights}}
+\index{getDirectionalLights@{getDirectionalLights}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getDirectionalLights()}{getDirectionalLights()}}
+{\footnotesize\ttfamily \label{class_scene_abf2b97b9c9b9bc79199ceaa33915ad4a} 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_directional_light}{Directional\+Light}} $>$ \& Scene::\+get\+Directional\+Lights (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves all directional lights in the scene. 
+
+Provides read-\/only access to the internal list of directional lights.
+
+\begin{DoxyReturn}{Returns}
+Constant reference to a vector of \doxylink{class_directional_light}{Directional\+Light} objects.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+The returned reference does not allow modification of the container, but the Light objects themselves may still be mutable if not enforced otherwise. 
+\end{DoxyWarning}
 \Hypertarget{class_scene_aaed9de9c90065a628e59748b59d32f4f}\index{Scene@{Scene}!getMeshes@{getMeshes}}
 \index{getMeshes@{getMeshes}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{getMeshes()}{getMeshes()}}

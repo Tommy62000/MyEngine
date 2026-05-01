@@ -7,15 +7,22 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Mesh.h"{}}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_scene}{Scene}}\ \{}
-\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_scene_a409275c22f5d3cc3544d8689fa189866}{addMesh}}(std::unique\_ptr<Mesh>\ mesh);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::unique\_ptr<Mesh>>\&\ \doxymbox{\hyperlink{class_scene_aaed9de9c90065a628e59748b59d32f4f}{getMeshes}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00041\ \ \ \ \ std::vector<std::unique\_ptr<Mesh>>\ meshes;}
-\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}DirectionalLight.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_scene}{Scene}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_scene_a409275c22f5d3cc3544d8689fa189866}{addMesh}}(std::unique\_ptr<Mesh>\ mesh);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::unique\_ptr<Mesh>>\&\ \doxymbox{\hyperlink{class_scene_aaed9de9c90065a628e59748b59d32f4f}{getMeshes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_scene_a774469d7cbb330c0ad7c97112ca8fcd7}{addDirectionalLight}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_directional_light}{DirectionalLight}}\&\ light);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<DirectionalLight>\&\ \doxymbox{\hyperlink{class_scene_abf2b97b9c9b9bc79199ceaa33915ad4a}{getDirectionalLights}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ std::vector<std::unique\_ptr<Mesh>>\ meshes;}
+\DoxyCodeLine{00066\ \ \ \ \ std::vector<DirectionalLight>\ directionalLights;}
+\DoxyCodeLine{00067\ \};}
 
 \end{DoxyCode}
