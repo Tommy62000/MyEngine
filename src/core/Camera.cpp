@@ -1,5 +1,7 @@
 #include "Camera.h"
 #include <glm/gtc/constants.hpp>
+#define GLFW_INCLUDE_NONE
+#include <GLFW/glfw3.h>
 
 Camera::Camera(glm::vec3 C,
                glm::vec3 worldUp,
@@ -94,4 +96,31 @@ void Camera::updateCameraVectors()
     u_f = glm::normalize(f);
     u_r = glm::normalize(glm::cross(u_f, worldUp));
     u_u = glm::normalize(glm::cross(u_r, u_f));
+}
+
+void Camera::processKeyboard(int key, float deltaTime) {
+    float velocity = movementSpeed * deltaTime;
+
+    if (key == GLFW_KEY_W)
+        C += u_f * velocity;
+    if (key == GLFW_KEY_S)
+        C -= u_f * velocity;
+    if (key == GLFW_KEY_A)
+        C -= u_r * velocity;
+    if (key == GLFW_KEY_D)
+        C += u_r * velocity;
+}
+
+void Camera::processMouseMovement(float xoffset, float yoffset) {
+    xoffset *= mouseSensitivity;
+    yoffset *= mouseSensitivity;
+
+    yaw   += xoffset;
+    pitch += yoffset;
+
+    // Clamp pitch per evitare flip
+    if (pitch > 89.0f) pitch = 89.0f;
+    if (pitch < -89.0f) pitch = -89.0f;
+
+    updateCameraVectors();
 }

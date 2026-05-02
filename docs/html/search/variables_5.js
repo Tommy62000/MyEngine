@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nearplane_0',['nearPlane',['../class_camera.html#a78d8722a95e4f7770d79c950bda2bfdc',1,'Camera']]]
+  ['mousesensitivity_0',['mouseSensitivity',['../class_camera.html#a374b33e654bf21d19230a82672bd3aac',1,'Camera']]],
+  ['movementspeed_1',['movementSpeed',['../class_camera.html#a03987cf3bbf312be16bb881939382d83',1,'Camera']]]
 ];

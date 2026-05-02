@@ -3,7 +3,7 @@
 in vec3 FragPos;
 in vec3 Normal;
 
-uniform vec3 lightDir;   // direzione luce (normalizzata)
+uniform vec3 lightDir;   // light direction (normalized)
 uniform vec3 lightColor;
 uniform vec3 objectColor;
 

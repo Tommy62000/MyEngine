@@ -1,0 +1,136 @@
+\doxysection{Input Class Reference}
+\hypertarget{class_input}{}\label{class_input}\index{Input@{Input}}
+
+
+Static input system wrapper around GLFW.  
+
+
+
+
+{\ttfamily \+\#include $<$Input.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_input_ac5bb7a9133102be65e1d2227981c4317}{Init}} (GLFWwindow \texorpdfstring{$\ast$}{*}window)
+\begin{DoxyCompactList}\small\item\em Initializes the input system. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_input_af80dcfde6dbfe39bf3bc0345c75595ce}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the input state for the current frame. \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{class_input_abd1025a27b7e444542fa35d9f2a1b9e3}{Is\+Key\+Pressed}} (int key)
+\begin{DoxyCompactList}\small\item\em Checks if a key is currently pressed. \end{DoxyCompactList}\item 
+static glm::\+vec2 \doxymbox{\hyperlink{class_input_a7a357be68e8d3c6797599918d613de70}{Get\+Mouse\+Delta}} ()
+\begin{DoxyCompactList}\small\item\em Returns the mouse movement delta since last frame. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_input_adba20fa9f2d9afc49311a86de297d2a8}{Set\+Cursor\+Mode}} (Cursor\+Mode mode)
+\begin{DoxyCompactList}\small\item\em Sets the cursor mode (locked or normal). \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_input_af9bb2b5a72fba43e99d44404fa44159b}{Reset\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em Resets mouse internal state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static input system wrapper around GLFW. 
+
+Provides keyboard state polling and mouse delta tracking. Designed as a global input manager for the engine.
+
+Handles:\+
+\begin{DoxyItemize}
+\item Keyboard input (WASD, actions, etc.)
+\item Mouse movement (delta-\/based FPS camera control)
+\item Cursor mode switching (normal /\+ locked) 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_input_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_input_a7a357be68e8d3c6797599918d613de70}\index{Input@{Input}!GetMouseDelta@{GetMouseDelta}}
+\index{GetMouseDelta@{GetMouseDelta}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{GetMouseDelta()}{GetMouseDelta()}}
+{\footnotesize\ttfamily \label{class_input_a7a357be68e8d3c6797599918d613de70} 
+glm::\+vec2 Input::\+\+Get\+Mouse\+Delta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the mouse movement delta since last frame. 
+
+Used for camera rotation in FPS-\/style controls.
+
+\begin{DoxyReturn}{Returns}
+2D vector containing (x, y) mouse movement 
+\end{DoxyReturn}
+\Hypertarget{class_input_ac5bb7a9133102be65e1d2227981c4317}\index{Input@{Input}!Init@{Init}}
+\index{Init@{Init}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_input_ac5bb7a9133102be65e1d2227981c4317} 
+void Input::\+\+Init (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initializes the input system. 
+
+Registers GLFW callbacks and binds the window context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Pointer to the GLFW window \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_input_abd1025a27b7e444542fa35d9f2a1b9e3}\index{Input@{Input}!IsKeyPressed@{IsKeyPressed}}
+\index{IsKeyPressed@{IsKeyPressed}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{IsKeyPressed()}{IsKeyPressed()}}
+{\footnotesize\ttfamily \label{class_input_abd1025a27b7e444542fa35d9f2a1b9e3} 
+bool Input::\+\+Is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{int}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if a key is currently pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & GLFW key code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key is pressed, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_input_af9bb2b5a72fba43e99d44404fa44159b}\index{Input@{Input}!ResetMouse@{ResetMouse}}
+\index{ResetMouse@{ResetMouse}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{ResetMouse()}{ResetMouse()}}
+{\footnotesize\ttfamily \label{class_input_af9bb2b5a72fba43e99d44404fa44159b} 
+void Input::\+\+Reset\+Mouse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resets mouse internal state. 
+
+Useful when switching cursor modes to avoid large delta spikes. \Hypertarget{class_input_adba20fa9f2d9afc49311a86de297d2a8}\index{Input@{Input}!SetCursorMode@{SetCursorMode}}
+\index{SetCursorMode@{SetCursorMode}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{SetCursorMode()}{SetCursorMode()}}
+{\footnotesize\ttfamily \label{class_input_adba20fa9f2d9afc49311a86de297d2a8} 
+void Input::\+\+Set\+Cursor\+Mode (\begin{DoxyParamCaption}\item[{Cursor\+Mode}]{mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the cursor mode (locked or normal). 
+
+Locked mode hides and captures the cursor for FPS control. Normal mode releases the cursor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Desired cursor mode \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_input_af80dcfde6dbfe39bf3bc0345c75595ce}\index{Input@{Input}!Update@{Update}}
+\index{Update@{Update}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_input_af80dcfde6dbfe39bf3bc0345c75595ce} 
+void Input::\+\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Updates the input state for the current frame. 
+
+Polls keyboard states and resets per-\/frame mouse deltas. Must be called once per frame before using input data. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+core/\+input/\+Input.\+h\item 
+src/\+core/\+input/\+Input.\+cpp\end{DoxyCompactItemize}

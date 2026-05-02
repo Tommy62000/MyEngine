@@ -115,6 +115,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a733fb6fc530d03f207fd34c4006a310e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets near clipping plane distance.  <br /></td></tr>
 <tr class="memitem:a3c35a632a9f8d81889ef0513ac8eba35" id="r_a3c35a632a9f8d81889ef0513ac8eba35"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3c35a632a9f8d81889ef0513ac8eba35">setFarPlane</a> (float newFarPlane)</td></tr>
 <tr class="memdesc:a3c35a632a9f8d81889ef0513ac8eba35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets far clipping plane distance.  <br /></td></tr>
+<tr class="memitem:a5e8eb95e6b9cd4de9b5950e7fe600ca1" id="r_a5e8eb95e6b9cd4de9b5950e7fe600ca1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5e8eb95e6b9cd4de9b5950e7fe600ca1">setMovementSpeed</a> (float newMovementSpeed)</td></tr>
+<tr class="memdesc:a5e8eb95e6b9cd4de9b5950e7fe600ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the camera movement speed.  <br /></td></tr>
+<tr class="memitem:a0f2b75d47e4b86a3a8f4eafc4d1e68bc" id="r_a0f2b75d47e4b86a3a8f4eafc4d1e68bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0f2b75d47e4b86a3a8f4eafc4d1e68bc">setMouseSensitivity</a> (float newMouseSensitivity)</td></tr>
+<tr class="memdesc:a0f2b75d47e4b86a3a8f4eafc4d1e68bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the mouse sensitivity for camera rotation.  <br /></td></tr>
 <tr class="memitem:a5dac6554771b6f4eb48f1f40773e5e38" id="r_a5dac6554771b6f4eb48f1f40773e5e38"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5dac6554771b6f4eb48f1f40773e5e38">Camera</a> (glm::vec3 <a class="el" href="#a2a4da80c688f35015fa2667cdb7890a5">C</a>=glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3 <a class="el" href="#a97e7a4ff433ea2bfcbfd40469aaf4d83">worldUp</a>=glm::vec3(0.0f, 1.0f, 0.0f), float <a class="el" href="#ad76701b22630f2df28a0ae15f0497a3a">yaw</a>=-90.0f, float <a class="el" href="#ab56fcb39f580e8d2159cf2c9c6d9a65a">pitch</a>=0.0f)</td></tr>
 <tr class="memdesc:a5dac6554771b6f4eb48f1f40773e5e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a 3D camera.  <br /></td></tr>
 <tr class="memitem:a2f90e661a78172675ca06ea69667b531" id="r_a2f90e661a78172675ca06ea69667b531"><td class="memItemLeft">glm::mat4&#160;</td><td class="memItemRight"><a class="el" href="#a2f90e661a78172675ca06ea69667b531">getViewMatrix</a> () const</td></tr>
@@ -123,6 +127,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3bb21fdfb8bd8974c880a33741a549df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the projection matrix of the camera.  <br /></td></tr>
 <tr class="memitem:ad424b8b92e580508caf21337b69b93fa" id="r_ad424b8b92e580508caf21337b69b93fa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad424b8b92e580508caf21337b69b93fa">updateCameraVectors</a> ()</td></tr>
 <tr class="memdesc:ad424b8b92e580508caf21337b69b93fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recomputes the camera orientation vectors.  <br /></td></tr>
+<tr class="memitem:ae9ed16686634489ce22dbe8b00e246af" id="r_ae9ed16686634489ce22dbe8b00e246af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae9ed16686634489ce22dbe8b00e246af">processKeyboard</a> (int key, float deltaTime)</td></tr>
+<tr class="memdesc:ae9ed16686634489ce22dbe8b00e246af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes keyboard input for camera movement.  <br /></td></tr>
+<tr class="memitem:a96d300da335234059e602591070ba009" id="r_a96d300da335234059e602591070ba009"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a96d300da335234059e602591070ba009">processMouseMovement</a> (float xoffset, float yoffset)</td></tr>
+<tr class="memdesc:a96d300da335234059e602591070ba009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes mouse movement input for camera rotation.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -150,6 +158,12 @@ float&#160;</td><td class="memItemRight"><b>nearPlane</b> = 0.1f</td></tr>
 <tr class="memitem:a8e8436cced3a180e13bfafa0791fb82a" id="r_a8e8436cced3a180e13bfafa0791fb82a"><td class="memItemLeft"><a id="a8e8436cced3a180e13bfafa0791fb82a" name="a8e8436cced3a180e13bfafa0791fb82a"></a>
 float&#160;</td><td class="memItemRight"><b>farPlane</b> = 100.0f</td></tr>
 <tr class="memdesc:a8e8436cced3a180e13bfafa0791fb82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Far clipping plane distance. <br /></td></tr>
+<tr class="memitem:a03987cf3bbf312be16bb881939382d83" id="r_a03987cf3bbf312be16bb881939382d83"><td class="memItemLeft"><a id="a03987cf3bbf312be16bb881939382d83" name="a03987cf3bbf312be16bb881939382d83"></a>
+float&#160;</td><td class="memItemRight"><b>movementSpeed</b> = 3.0f</td></tr>
+<tr class="memdesc:a03987cf3bbf312be16bb881939382d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movement speed of the camera in world space. <br /></td></tr>
+<tr class="memitem:a374b33e654bf21d19230a82672bd3aac" id="r_a374b33e654bf21d19230a82672bd3aac"><td class="memItemLeft"><a id="a374b33e654bf21d19230a82672bd3aac" name="a374b33e654bf21d19230a82672bd3aac"></a>
+float&#160;</td><td class="memItemRight"><b>mouseSensitivity</b> = 0.1f</td></tr>
+<tr class="memdesc:a374b33e654bf21d19230a82672bd3aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse sensitivity multiplier for camera rotation. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A 3D camera. </p>
@@ -249,6 +263,70 @@ float&#160;</td><td class="memItemRight"><b>farPlane</b> = 100.0f</td></tr>
 
 </div>
 </div>
+<a id="ae9ed16686634489ce22dbe8b00e246af" name="ae9ed16686634489ce22dbe8b00e246af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ed16686634489ce22dbe8b00e246af">&#9670;&#160;</a></span>processKeyboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::processKeyboard </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deltaTime</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processes keyboard input for camera movement. </p>
+<p>Updates the camera position based on the given key input. Typically used with WASD controls to move the camera in world space.</p>
+<p>Movement is scaled by deltaTime to ensure frame-rate independent motion.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>GLFW key code representing the pressed key </td></tr>
+    <tr><td class="paramname">deltaTime</td><td>Time elapsed since the last frame (in seconds) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a96d300da335234059e602591070ba009" name="a96d300da335234059e602591070ba009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96d300da335234059e602591070ba009">&#9670;&#160;</a></span>processMouseMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::processMouseMovement </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>xoffset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>yoffset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processes mouse movement input for camera rotation. </p>
+<p>Updates the camera yaw and pitch based on mouse movement offsets. This is typically used for FPS-style camera control.</p>
+<p>The offsets are usually scaled by a mouse sensitivity factor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xoffset</td><td>Horizontal mouse movement since last frame </td></tr>
+    <tr><td class="paramname">yoffset</td><td>Vertical mouse movement since last frame </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2fd7432c0256ad790097b87c018c4b3f" name="a2fd7432c0256ad790097b87c018c4b3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2fd7432c0256ad790097b87c018c4b3f">&#9670;&#160;</a></span>setAspectRatio()</h2>
 
@@ -318,6 +396,59 @@ float&#160;</td><td class="memItemRight"><b>farPlane</b> = 100.0f</td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">newFov</td><td>Field of view in degrees (clamped to avoid extreme distortion) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0f2b75d47e4b86a3a8f4eafc4d1e68bc" name="a0f2b75d47e4b86a3a8f4eafc4d1e68bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2b75d47e4b86a3a8f4eafc4d1e68bc">&#9670;&#160;</a></span>setMouseSensitivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::setMouseSensitivity </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>newMouseSensitivity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the mouse sensitivity for camera rotation. </p>
+<p>Controls how strongly mouse movement affects yaw and pitch changes. Higher values result in faster camera rotation for the same mouse delta.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newMouseSensitivity</td><td>New sensitivity multiplier for mouse input </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5e8eb95e6b9cd4de9b5950e7fe600ca1" name="a5e8eb95e6b9cd4de9b5950e7fe600ca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8eb95e6b9cd4de9b5950e7fe600ca1">&#9670;&#160;</a></span>setMovementSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::setMovementSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>newMovementSpeed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the camera movement speed. </p>
+<p>Defines how fast the camera moves through world space when processing keyboard input (e.g., WASD movement).</p>
+<p>The final movement speed is typically scaled by delta time to ensure frame-rate independent motion.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newMovementSpeed</td><td>New movement speed value (units per second) </td></tr>
   </table>
   </dd>
 </dl>

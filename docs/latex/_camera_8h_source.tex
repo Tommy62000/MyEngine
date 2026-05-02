@@ -9,7 +9,7 @@
 \DoxyCodeLine{00005\ }
 \DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_camera_a5dac6554771b6f4eb48f1f40773e5e38}{Camera}}\ \{}
 \DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ State}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ STATE\ PARAMETERS}}
 \DoxyCodeLine{00018\ \ \ \ \ glm::vec3\ \doxymbox{\hyperlink{class_camera_a2a4da80c688f35015fa2667cdb7890a5}{C}};\ }
 \DoxyCodeLine{00019\ \ \ \ \ glm::vec3\ \doxymbox{\hyperlink{class_camera_a97e7a4ff433ea2bfcbfd40469aaf4d83}{worldUp}};\ }
 \DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_ad76701b22630f2df28a0ae15f0497a3a}{yaw}};\ }
@@ -24,7 +24,7 @@
 \DoxyCodeLine{00053\ }
 \DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_camera_a5cb6768d252de0ec2922d4638868844d}{setPitch}}(\textcolor{keywordtype}{float}\ newPitch);}
 \DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Projection\ parameters}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ PROJECTION\ PARAMETERS}}
 \DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_aff7393c9cfbccd7e369091f00008da93}{fov}}\ =\ 60.0f;\ }
 \DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_aa6f013fdb4560daaa5ca6ace1a846ca7}{aspectRatio}}\ =\ 16.0f\ /\ 9.0f;\ }
 \DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_a78d8722a95e4f7770d79c950bda2bfdc}{nearPlane}}\ =\ 0.1f;\ }
@@ -39,21 +39,33 @@
 \DoxyCodeLine{00093\ }
 \DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_camera_a3c35a632a9f8d81889ef0513ac8eba35}{setFarPlane}}(\textcolor{keywordtype}{float}\ newFarPlane);}
 \DoxyCodeLine{00100\ }
-\DoxyCodeLine{00114\ \ \ \ \ \doxymbox{\hyperlink{class_camera_a5dac6554771b6f4eb48f1f40773e5e38}{Camera}}(glm::vec3\ \doxymbox{\hyperlink{class_camera_a2a4da80c688f35015fa2667cdb7890a5}{C}}\ =\ glm::vec3(0.0f,\ 0.0f,\ 1.0f),}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \doxymbox{\hyperlink{class_camera_a97e7a4ff433ea2bfcbfd40469aaf4d83}{worldUp}}\ =\ glm::vec3(0.0f,\ 1.0f,\ 0.0f),}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_ad76701b22630f2df28a0ae15f0497a3a}{yaw}}\ =\ -\/90.0f,}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_ab56fcb39f580e8d2159cf2c9c6d9a65a}{pitch}}\ =\ 0.0f);}
-\DoxyCodeLine{00118\ }
-\DoxyCodeLine{00129\ \ \ \ \ glm::mat4\ \doxymbox{\hyperlink{class_camera_a2f90e661a78172675ca06ea69667b531}{getViewMatrix}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00130\ }
-\DoxyCodeLine{00143\ \ \ \ \ glm::mat4\ \doxymbox{\hyperlink{class_camera_a3bb21fdfb8bd8974c880a33741a549df}{getProjectionMatrix}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00144\ }
-\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_camera_ad424b8b92e580508caf21337b69b93fa}{updateCameraVectors}}();}
-\DoxyCodeLine{00156\ }
-\DoxyCodeLine{00157\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00158\ \ \ \ \ glm::vec3\ u\_f;}
-\DoxyCodeLine{00159\ \ \ \ \ glm::vec3\ u\_u;}
-\DoxyCodeLine{00160\ \ \ \ \ glm::vec3\ u\_r;}
-\DoxyCodeLine{00161\ \};}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\ MOVEMENT\ PARAMETERS}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_a03987cf3bbf312be16bb881939382d83}{movementSpeed}}\ =\ 3.0f;\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_a374b33e654bf21d19230a82672bd3aac}{mouseSensitivity}}\ =\ 0.1f;\ }
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_camera_a5e8eb95e6b9cd4de9b5950e7fe600ca1}{setMovementSpeed}}(\textcolor{keywordtype}{float}\ newMovementSpeed);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_camera_a0f2b75d47e4b86a3a8f4eafc4d1e68bc}{setMouseSensitivity}}(\textcolor{keywordtype}{float}\ newMouseSensitivity);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00142\ \ \ \ \ \doxymbox{\hyperlink{class_camera_a5dac6554771b6f4eb48f1f40773e5e38}{Camera}}(glm::vec3\ \doxymbox{\hyperlink{class_camera_a2a4da80c688f35015fa2667cdb7890a5}{C}}\ =\ glm::vec3(0.0f,\ 0.0f,\ 1.0f),}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \doxymbox{\hyperlink{class_camera_a97e7a4ff433ea2bfcbfd40469aaf4d83}{worldUp}}\ =\ glm::vec3(0.0f,\ 1.0f,\ 0.0f),}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_ad76701b22630f2df28a0ae15f0497a3a}{yaw}}\ =\ -\/90.0f,}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_camera_ab56fcb39f580e8d2159cf2c9c6d9a65a}{pitch}}\ =\ 0.0f);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00157\ \ \ \ \ glm::mat4\ \doxymbox{\hyperlink{class_camera_a2f90e661a78172675ca06ea69667b531}{getViewMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00171\ \ \ \ \ glm::mat4\ \doxymbox{\hyperlink{class_camera_a3bb21fdfb8bd8974c880a33741a549df}{getProjectionMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_camera_ad424b8b92e580508caf21337b69b93fa}{updateCameraVectors}}();}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_camera_ae9ed16686634489ce22dbe8b00e246af}{processKeyboard}}(\textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_camera_a96d300da335234059e602591070ba009}{processMouseMovement}}(\textcolor{keywordtype}{float}\ xoffset,\ \textcolor{keywordtype}{float}\ yoffset);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00212\ \ \ \ \ glm::vec3\ u\_f;}
+\DoxyCodeLine{00213\ \ \ \ \ glm::vec3\ u\_u;}
+\DoxyCodeLine{00214\ \ \ \ \ glm::vec3\ u\_r;}
+\DoxyCodeLine{00215\ \};}
 
 \end{DoxyCode}

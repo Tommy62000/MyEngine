@@ -14,7 +14,7 @@
  */
 class Camera {
 public:
-    // State
+    // STATE PARAMETERS
     glm::vec3 C; ///< The camera position in the WCS
     glm::vec3 worldUp; ///< Vertical versor in the WCS
     float yaw; ///< The camera rotation around its vertical axis [degrees]
@@ -63,7 +63,7 @@ public:
      */
     void setPitch(float newPitch);
 
-    // Projection parameters
+    // PROJECTION PARAMETERS
     float fov = 60.0f; ///< The camera vertical fov (OpenGL standard) [degrees]
     float aspectRatio = 16.0f / 9.0f; ///< The viewport aspect ratio
     float nearPlane = 0.1f; ///< Near clipping plane distance
@@ -97,6 +97,34 @@ public:
      * @param newFarPlane Must be > nearPlane
      */
     void setFarPlane(float newFarPlane);
+
+    // MOVEMENT PARAMETERS
+    float movementSpeed = 3.0f; ///< Movement speed of the camera in world space
+    float mouseSensitivity = 0.1f; ///< Mouse sensitivity multiplier for camera rotation
+    
+    /**
+     * @brief Sets the camera movement speed.
+     *
+     * Defines how fast the camera moves through world space when
+     * processing keyboard input (e.g., WASD movement).
+     *
+     * The final movement speed is typically scaled by delta time
+     * to ensure frame-rate independent motion.
+     *
+     * @param newMovementSpeed New movement speed value (units per second)
+     */
+    void setMovementSpeed(float newMovementSpeed);
+
+    /**
+     * @brief Sets the mouse sensitivity for camera rotation.
+     *
+     * Controls how strongly mouse movement affects yaw and pitch changes.
+     * Higher values result in faster camera rotation for the same mouse delta.
+     *
+     *
+     * @param newMouseSensitivity New sensitivity multiplier for mouse input
+     */
+    void setMouseSensitivity(float newMouseSensitivity);
 
     /**
      * @brief Constructs a 3D camera.
@@ -153,6 +181,32 @@ public:
      * @note This function maintains a right-handed coordinate system.
      */
     void updateCameraVectors();
+
+    /**
+     * @brief Processes keyboard input for camera movement.
+     *
+     * Updates the camera position based on the given key input.
+     * Typically used with WASD controls to move the camera in world space.
+     *
+     * Movement is scaled by deltaTime to ensure frame-rate independent motion.
+     *
+     * @param key GLFW key code representing the pressed key
+     * @param deltaTime Time elapsed since the last frame (in seconds)
+     */
+    void processKeyboard(int key, float deltaTime);
+
+    /**
+     * @brief Processes mouse movement input for camera rotation.
+     *
+     * Updates the camera yaw and pitch based on mouse movement offsets.
+     * This is typically used for FPS-style camera control.
+     *
+     * The offsets are usually scaled by a mouse sensitivity factor.
+     *
+     * @param xoffset Horizontal mouse movement since last frame
+     * @param yoffset Vertical mouse movement since last frame
+     */
+    void processMouseMovement(float xoffset, float yoffset);
 
 private:
     glm::vec3 u_f;
